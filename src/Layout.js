@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './Layout.css';
 import Home from './Home.js'
 import Skills from './Skills.js'
-import {Button, Icon, Row, Col} from 'react-materialize'
+import {Row, Col} from 'react-materialize'
 
 class Layout extends Component {
     render() {
         return (
             <div>
                 <Row>
-                    <Col m={12}>
+                    <Col s={12}>
                         <Home />
                         <Skills />
                     </Col>

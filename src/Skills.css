@@ -2,3 +2,32 @@
     height: 100vh;
     background-color: aqua;
 }
+
+#skillsTop {
+    height: 35%;
+    background-color: green;
+    position: relative;
+}
+
+#skillsBot {
+    height: 65%;
+    background-color: yellow;
+}
+
+.carousel {
+    width: 60%;
+    height: 60%;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.carousel .carousel-item{
+    width: 150px !important;
+    height: 150px !important;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
