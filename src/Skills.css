@@ -1,33 +1,168 @@
 #skills {
+    font-family: 'Roboto', sans-serif;
     height: 100vh;
-    background-color: aqua;
+    background-color: #C26868;
 }
 
 #skillsTop {
-    height: 35%;
-    background-color: green;
+    height: 0;
+    background-color: #C26868;
     position: relative;
+    display: none;
+}
+
+#section {
+    font-family: 'Ubuntu Mono', monospace;
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+    font-size: 2rem;
+    text-align: center;
 }
 
 #skillsBot {
-    height: 65%;
-    background-color: yellow;
+    height: 100%;
+    background-color: #C26868;
+}
+
+#left {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+#right {
+    width: 80%;
+    height: 100%;
+    float: right;
 }
 
 .carousel {
-    width: 60%;
-    height: 60%;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    position: absolute;
+    width: 200%;
+    height: 35%;
 }
 
-.carousel .carousel-item{
+.carousel .carousel-item {
     width: 150px !important;
     height: 150px !important;
     padding-right: 20px;
     padding-left: 20px;
-
 }
+
+.carousel .carousel-item img {
+    transform: rotateZ(-90deg);
+}
+
+#typedBox {
+    width: 60%;
+    height: 80%;
+    background-color: black;
+    transform: translateX(15%) translateY(12.5%);
+    border-radius: 10px;
+}
+
+#typedHeader {
+    width: 100%;
+    height: 10%;
+    background-color: #6a6a6a;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    position: relative;
+}
+
+#typedHeader p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    font-size: 1.5em;
+}
+
+#typedBody{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px 10px 0 0;
+}
+
+@media (min-width: 1500px) {
+    .carousel {
+        transform: translateX(20%) translateY(-40%) rotateZ(90deg);
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1499px) {
+    .carousel {
+        transform: translateX(20%) translateY(-15%) rotateZ(90deg);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1299px) {
+    .carousel {
+        transform: translateX(20%) translateY(10%) rotateZ(90deg);
+    }
+}
+
+@media (min-width: 300px) and (max-width: 1024px) {
+    #left {
+        width: 100%;
+        height: 25%;
+    }
+
+    #right {
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+
+    #skillsTop {
+        display: block;
+        height: 5%;
+    }
+
+    #skillsBot {
+        height: 95%;
+    }
+    .carousel {
+        width: 100%;
+        height: 100%;
+        transform: translateX(0);
+    }
+
+    .carousel .carousel-item img {
+        transform: rotateZ(0deg);
+    }
+
+    #typedBox {
+        width: 80%;
+        height: 85%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+    #left {
+        height: 15%;
+    }
+
+    #right {
+        height: 85%;
+    }
+    .carousel .carousel-item {
+        width: 100px !important;
+        height: 100px !important;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    #typedBox {
+        width: 95%;
+        height: 75%;
+        position: absolute;
+    }
+}
+
+
 

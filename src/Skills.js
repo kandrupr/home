@@ -40,16 +40,30 @@ class Skills extends Component {
         return (
             <div id="skills">
                 <div id="skillsTop">
-                    <Carousel images={[
-                        cplus,
-                        csharp,
-                        java,
-                        php,
-                        python,
-                        reacticon
-                    ]} />
+                    <h1 id="section">SKILLS</h1>
                 </div>
-                <div id="skillsBot"></div>
+                <div id="skillsBot">
+                    <div id="left">
+                        <Carousel images={[
+                            cplus,
+                            csharp,
+                            java,
+                            php,
+                            python,
+                            reacticon
+                        ]} />
+                    </div>
+                    <div id="right">
+                        <div id="typedBox">
+                            <div id="typedHeader">
+                                <p>kandrupr@github.io:~</p>
+                            </div>
+                            <div id="typedBody">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
