@@ -11,18 +11,10 @@
     display: none;
 }
 
-#section {
-    font-family: 'Ubuntu Mono', monospace;
-    height: 100%;
-    margin: 0;
-    padding: 5px;
-    font-size: 2rem;
-    text-align: center;
-}
-
 #skillsBot {
     height: 100%;
     background-color: #C26868;
+    position: relative;
 }
 
 #left {
@@ -57,7 +49,7 @@
     width: 60%;
     height: 80%;
     background-color: black;
-    transform: translateX(15%) translateY(12.5%);
+    transform: translateX(5%) translateY(7.5%);
     border-radius: 10px;
 }
 
@@ -85,6 +77,11 @@
     border-radius: 10px 10px 0 0;
 }
 
+#resume {
+    position: absolute;
+    bottom: 0;
+}
+
 @media (min-width: 1500px) {
     .carousel {
         transform: translateX(20%) translateY(-40%) rotateZ(90deg);
@@ -104,24 +101,33 @@
 }
 
 @media (min-width: 300px) and (max-width: 1024px) {
+    #section {
+        font-family: 'Ubuntu Mono', monospace;
+        height: 100%;
+        margin: 0;
+        padding-top: 15px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
     #left {
         width: 100%;
-        height: 25%;
+        height: 20%;
     }
 
     #right {
         width: 100%;
-        height: 75%;
+        height: 80%;
         position: relative;
     }
 
     #skillsTop {
         display: block;
-        height: 5%;
+        height: 7%;
     }
 
     #skillsBot {
-        height: 95%;
+        height: 93%;
     }
     .carousel {
         width: 100%;
@@ -129,38 +135,110 @@
         transform: translateX(0);
     }
 
+    .carousel .carousel-item {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
     .carousel .carousel-item img {
         transform: rotateZ(0deg);
+        width: 110px !important;
+        height: 110px !important;
     }
 
     #typedBox {
         width: 80%;
-        height: 85%;
+        height: 75%;
         position: absolute;
         left: 50%;
+        top: 5%;
         transform: translateX(-50%);
     }
+
+
 }
 
 @media (min-width: 300px) and (max-width: 767px) {
     #left {
-        height: 15%;
+        height: 20%;
     }
 
     #right {
-        height: 85%;
-    }
-    .carousel .carousel-item {
-        width: 100px !important;
-        height: 100px !important;
-        padding-right: 20px;
-        padding-left: 20px;
+        height: 80%;
     }
 
+    .carousel .carousel-item {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .carousel .carousel-item img {
+        width: 90px !important;
+        height: 90px !important;
+    }
     #typedBox {
         width: 95%;
         height: 75%;
+        top: 5%;
         position: absolute;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
+    #skillsTop {
+        display: none;
+    }
+
+    #skillsBot {
+        height: 100%;
+    }
+
+    #left {
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+    #right {
+        width: 80%;
+        height: 100%;
+    }
+
+    .carousel {
+        width: 200%;
+        height: 35%;
+        transform: translateX(20%) translateY(-40%) rotateZ(90deg);
+    }
+
+    .carousel .carousel-item {
+        width: 75px !important;
+        height: 75px !important;
+    }
+
+    .carousel .carousel-item img {
+        width: 75px !important;
+        height: 75px !important;
+        transform: rotateZ(-90deg);
+    }
+
+
+    #typedBox {
+        left:0;
+        width: 70%;
+        height: 75%;
+        top: 5%;
+        position: absolute;
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+    #skillsTop {
+        display: none;
+    }
+
+    #skillsBot {
+        display: none;
     }
 }
 

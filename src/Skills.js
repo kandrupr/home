@@ -8,6 +8,7 @@ import java from './assets/java-icon.png';
 import php from './assets/php-icon.png';
 import python from './assets/python-icon.png';
 import reacticon from './assets/react-icon.png';
+import Typed from 'typed.js'
 
 class Skills extends Component {
     constructor() {
@@ -62,6 +63,7 @@ class Skills extends Component {
 
                             </div>
                         </div>
+                        <p id="resume">Lorem</p>
                     </div>
                 </div>
             </div>
