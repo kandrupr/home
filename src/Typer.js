@@ -3,6 +3,7 @@ import './Skills.css';
 import $ from 'jquery';
 import Typed from 'typed.js'
 
+var typed;
 var options;
 var complete = false;
 var typing = false;
@@ -13,15 +14,12 @@ class Typer extends Component {
         this.value = 0;
         this.languages = [
             "^400C++^1000\n installing components...^100\n Fetching from source...",
-            "^2000C#",
-            "^2000Java",
-            "^2000PHP",
-            "^2000Python",
-            "^2000React"
+            "^400C#^1000\n installing components...^100\n Fetching from source...",
+            "^400Java^1000\n installing components...^100\n Fetching from source...",
+            "^400PHP^1000\n installing components...^100\n Fetching from source...",
+            "^400Python^1000\n installing components...^100\n Fetching from source...",
+            "^400React^1000\n installing components...^100\n Fetching from source..."
         ];
-
-        this.typed = null;
-
     }
 
     inView(elem) {
@@ -42,18 +40,23 @@ class Typer extends Component {
             backSpeed: 15,
             loop: true,
             onComplete: function(self) {
-                console.log("TOGGLE");
                 if(!complete) {
                     typing = false;
                     complete = true;
                     self.toggle();
                 }
-            } ,
-            onLastStringBackspaced: function(self) {
-                that.typed.stop();
             },
-            onDestroy: function(self) {
-
+            onLastStringBackspaced: function(self) {
+                complete = false;
+                typing = false;
+            },
+            onTypingResumed: function(self) {
+                if(!complete && !typing) {
+                    typed.toggle();
+                    typed.destroy();
+                    typed = new Typed(that.refs.head, options);
+                    typing = true;
+                }
             }
         };
     }
@@ -63,9 +66,8 @@ class Typer extends Component {
         options = this.getOptions(0);
 
         $(window).scroll(function() {
-            console.log("TRUE");
             if(that.inView("#typedBody")) {
-                that.typed = new Typed(that.refs.head, options);
+                typed = new Typed(that.refs.head, options);
                 typing = true;
                 $(window).off();
             }
@@ -73,14 +75,12 @@ class Typer extends Component {
     }
 
     resumeTyping (value) {
-        console.log(this.value);
-        if(!typing){
-            console.log("REVERSE");
+        if(!typing && complete){
             if(value !== this.value) {
                 this.value = value;
-                options = this.getOptions(value);
+                options = this.getOptions(this.value);
                 typing = true;
-                this.typed.toggle();
+                typed.toggle();
             }
         }
     }

@@ -11,15 +11,10 @@ import reacticon from './assets/react-icon.png';
 import Typer from './Typer.js'
 
 class Skills extends Component {
-    constructor() {
-        super();
-    }
-
     componentDidMount() {
         var that = this;
         var children = $(".carousel").children();
         console.log(children[0]);
-        var languages = this.languages;
         $(".carousel-item").click( function() {
             var a = children.index(this);
             that.refs.terminal.resumeTyping(a);
