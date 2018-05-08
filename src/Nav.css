@@ -2,23 +2,33 @@
     display: none;
 }
 
+#navHolder {
+    position: absolute;
+    width: 50%;
+    height:75%;
+    top: 50%;
+    left: 50%;
+    background-color: #FFFFFF;
+    transform: translate(-50%, -50%);
+}
+
 @media (min-width: 1025px) {
     #nav {
         position:fixed;
         width: 20%;
-        background-color: #000000;
         height: 100vh;
         right: 0;
         z-index: 1;
         display: inline-block;
     }
+
+
 }
 
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
     #nav {
         position:fixed;
         width: 20%;
-        background-color: #000000;
         height: 100vh;
         right: 0;
         z-index: 1;
