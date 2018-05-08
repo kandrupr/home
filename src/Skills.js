@@ -8,33 +8,22 @@ import java from './assets/java-icon.png';
 import php from './assets/php-icon.png';
 import python from './assets/python-icon.png';
 import reacticon from './assets/react-icon.png';
-import Typed from 'typed.js'
+import Typer from './Typer.js'
 
 class Skills extends Component {
     constructor() {
         super();
-        this.languages = [
-            "C++",
-            "C#",
-            "Java",
-            "PHP",
-            "Python",
-            "React"
-        ];
     }
+
     componentDidMount() {
         var that = this;
         var children = $(".carousel").children();
         console.log(children[0]);
         var languages = this.languages;
         $(".carousel-item").click( function() {
-            var a = languages[children.index(this)];
-            that.cool(a);
+            var a = children.index(this);
+            that.refs.terminal.resumeTyping(a);
         });
-    }
-
-    cool(lang) {
-        console.log(lang);
     }
 
     render() {
@@ -59,9 +48,7 @@ class Skills extends Component {
                             <div id="typedHeader">
                                 <p>kandrupr@github.io:~</p>
                             </div>
-                            <div id="typedBody">
-
-                            </div>
+                            <Typer ref="terminal" />
                         </div>
                         <p id="resume">Lorem</p>
                     </div>
