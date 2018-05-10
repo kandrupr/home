@@ -21,6 +21,10 @@ class Skills extends Component {
         });
     }
 
+    startTyping() {
+        this.refs.terminal.firstType();
+    }
+
     render() {
         return (
             <div id="skills">

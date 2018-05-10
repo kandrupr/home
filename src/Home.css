@@ -1,4 +1,13 @@
 #home {
     height: 100vh;
     background-color: bisque;
+    position: relative;
+}
+
+#homeTitle{
+    padding: 0;
+    position: absolute;
+    top: 37%;
+    left: 48%;
+    transform: translate(-50%, -50%);
 }

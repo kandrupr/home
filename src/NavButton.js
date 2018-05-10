@@ -7,8 +7,9 @@ class NavButton extends Component {
     }
     render() {
         return (
-            <div>
-                <p>{this.props.name}</p>
+            <div className="nav-item">
+                <div className="nav-button"></div>
+                <span className="navTitle">&nbsp;&nbsp;&nbsp;{this.props.name}</span>
             </div>
 
         );

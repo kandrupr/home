@@ -22,16 +22,6 @@ class Typer extends Component {
         ];
     }
 
-    inView(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
-
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-    }
-
     getOptions(value) {
         var that = this;
         return {
@@ -62,16 +52,22 @@ class Typer extends Component {
     }
 
     componentDidMount() {
+        /*
         var that = this;
-        options = this.getOptions(0);
 
         $(window).scroll(function() {
             if(that.inView("#typedBody")) {
-                typed = new Typed(that.refs.head, options);
-                typing = true;
+
                 $(window).off();
             }
-        });
+        });*/
+    }
+
+    firstType() {
+
+        options = this.getOptions(0);
+        typed = new Typed(this.refs.head, options);
+        typing = true;
     }
 
     resumeTyping (value) {
