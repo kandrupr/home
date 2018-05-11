@@ -9,6 +9,7 @@ class Nav extends Component {
             <div id="nav">
                 <div id="navHolder">
                     <NavButton ref="navHome" name="home"/>
+                    <NavButton ref="navAbout" name="about"/>
                     <NavButton ref="navSkills" name="skills"/>
                     <NavButton ref="navProjects" name="projects"/>
                     <NavButton ref="navContact" name="contact"/>

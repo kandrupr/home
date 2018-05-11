@@ -1,0 +1,16 @@
+#about {
+    width: 100%;
+    height: 100vh;
+    background-color: #2a659c;
+    position: relative;
+}
+
+#about p {
+    padding: 0;
+    margin: 0;
+}
+
+#aboutCenter {
+    top: 50%;
+    position: absolute;;
+}

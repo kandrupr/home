@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './Layout.css';
 import Home from './Home.js'
+import About from './About.js'
 import Skills from './Skills.js'
 import Nav from './Nav.js'
 import $ from 'jquery';
 import {Row, Col} from 'react-materialize'
 
-var first = true;
+var firstAbout = true;
+var firstSkill = true;
 
 class Layout extends Component {
     inView(elem) {
@@ -25,9 +27,16 @@ class Layout extends Component {
         $(window).scroll(function() {
             if(that.inView("#home")) {
                 console.log("HOME");
+            } else if(that.inView("#aboutCenter")) {
+                console.log("ABOUT");
+                if(firstAbout) {
+                    console.log("HEY");
+                    firstAbout = false;
+                    $("#aboutP").fadeIn(3000);
+                }
             } else if(that.inView("#typedBody")) {
-                if(first) {
-                    first = false;
+                if(firstSkill) {
+                    firstSkill = false;
                     that.refs.skills.startTyping();
                 }
             } /*else if(that.inView()) {
@@ -44,6 +53,7 @@ class Layout extends Component {
                 <Row>
                     <Col s={12}>
                         <Home ref="home"/>
+                        <About ref="about"/>
                         <Skills ref="skills"/>
                     </Col>
                     <Nav />

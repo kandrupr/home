@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Skills.css';
-import $ from 'jquery';
 import Typed from 'typed.js'
 
 var typed;
