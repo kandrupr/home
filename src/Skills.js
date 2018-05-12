@@ -29,7 +29,7 @@ class Skills extends Component {
         return (
             <div id="skills">
                 <div id="skillsTop">
-                    <h1 id="section">SKILLS</h1>
+                    <h1 id="section">Skills</h1>
                 </div>
                 <div id="skillsBot">
                     <div id="left">

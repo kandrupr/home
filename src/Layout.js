@@ -25,14 +25,11 @@ class Layout extends Component {
         var that = this;
 
         $(window).scroll(function() {
-            if(that.inView("#home")) {
-                console.log("HOME");
-            } else if(that.inView("#aboutCenter")) {
-                console.log("ABOUT");
+            if(that.inView("#aboutFinder")) {
                 if(firstAbout) {
-                    console.log("HEY");
                     firstAbout = false;
-                    $("#aboutP").fadeIn(3000);
+                    $("#aboutLeft").fadeIn(2000);
+                    $("#aboutRight").fadeIn(2000);
                 }
             } else if(that.inView("#typedBody")) {
                 if(firstSkill) {
