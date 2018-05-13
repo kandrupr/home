@@ -3,12 +3,15 @@ import './Layout.css';
 import Home from './Home.js'
 import About from './About.js'
 import Skills from './Skills.js'
+import Projects from './Projects.js'
+
 import Nav from './Nav.js'
 import $ from 'jquery';
 import {Row, Col} from 'react-materialize'
 
 var firstAbout = true;
 var firstSkill = true;
+var firstProjects = true;
 
 class Layout extends Component {
     inView(elem) {
@@ -26,6 +29,7 @@ class Layout extends Component {
 
         $(window).scroll(function() {
             if(that.inView("#aboutFinder")) {
+                //$(".navTitle").css("color", "#FFFFFF");
                 if(firstAbout) {
                     firstAbout = false;
                     $("#aboutLeft").fadeIn(2000);
@@ -36,9 +40,16 @@ class Layout extends Component {
                     firstSkill = false;
                     that.refs.skills.startTyping();
                 }
-            } /*else if(that.inView()) {
+            } else if(that.inView("#projectsFinder")) {
+                //$(".navTitle").css("color", "#E14100");
+                if(firstProjects) {
+                    firstProjects = false;
+                    $("#projectsTopSlider").addClass('animated bounceInRight');
+                    $("#projectsForeground").addClass('animated bounceInLeft');
 
-            } else if(that.inView()) {
+
+                }
+            } /*else if(that.inView()) {
 
             }*/
         });
@@ -52,8 +63,9 @@ class Layout extends Component {
                         <Home ref="home"/>
                         <About ref="about"/>
                         <Skills ref="skills"/>
+                        <Projects ref="projects"/>
                     </Col>
-                    <Nav />
+                    <Nav ref="nav"/>
                 </Row>
             </div>
         );

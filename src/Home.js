@@ -61,7 +61,7 @@ class Home extends Component {
                     </svg>
                 </div>
                 <div id="homeCenter">
-                    <h2 id="homeTitle"></h2>
+                    <h2 id="homeTitle" />
                 </div>
             </div>
         );
