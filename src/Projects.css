@@ -54,13 +54,13 @@
 #projectsBackground {
     position: absolute;
     height: 100vh;
-    z-index: -1;
+    z-index: 1;
 }
 
 #projectsForeground {
     position: relative;
     height: 100vh;
-    z-index: 0;
+    z-index: 2;
     background-color: transparent;
 }
 
@@ -69,6 +69,10 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
+}
+
+.slick-arrow {
+    display: none !important;
 }
 
 @media (min-width: 900px) and (max-width: 1024px) {
@@ -81,7 +85,14 @@
 
 }
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
-    #projectsTopSlider{
+    #projectsTopSlider {
         display: none;
+    }
+
+    #projectHolder {
+        top: 0;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
     }
 }

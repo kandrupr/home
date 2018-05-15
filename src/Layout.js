@@ -4,7 +4,7 @@ import Home from './Home.js'
 import About from './About.js'
 import Skills from './Skills.js'
 import Projects from './Projects.js'
-
+import Contact from './Contact.js'
 import Nav from './Nav.js'
 import $ from 'jquery';
 import {Row, Col} from 'react-materialize'
@@ -28,6 +28,7 @@ class Layout extends Component {
         var that = this;
 
         $(window).scroll(function() {
+
             if(that.inView("#aboutFinder")) {
                 //$(".navTitle").css("color", "#FFFFFF");
                 if(firstAbout) {
@@ -64,6 +65,7 @@ class Layout extends Component {
                         <About ref="about"/>
                         <Skills ref="skills"/>
                         <Projects ref="projects"/>
+                        <Contact ref="contact"/>
                     </Col>
                     <Nav ref="nav"/>
                 </Row>

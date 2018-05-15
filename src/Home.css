@@ -94,3 +94,8 @@
         display: none;
     }
 }
+
+.fail {
+    display: none;
+    color: red;
+}

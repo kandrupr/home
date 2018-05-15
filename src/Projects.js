@@ -29,12 +29,17 @@ class Projects extends Component {
     componentDidMount() {
         var that = this;
         $(window).resize(function() {
-            that.setState({resize: true});
+            setTimeout(function() {
+                that.setState({resize: true});
+            }, 500);
         });
     }
 
     createProjectHolder() {
-        console.log(window.innerWidth);
+        //console.log(window.innerWidth);
+        setTimeout(function() {
+            console.log(window.innerWidth);
+        }, 1000);
         if(window.innerWidth < 900) {
             const settings = {
                 dots: true,

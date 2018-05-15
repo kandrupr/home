@@ -24,6 +24,7 @@ class Home extends Component {
                 duration: anime.random(1000, 3000),
                 delay: anime.random(1000, 3000),
                 loop: true,
+                opacity: anime.random(0,100)/100,
                 direction: 'alternate',
                 easing: 'easeInOutSine',
                 autoplay: true
