@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Skills.css';
+import './css/Skills.css';
 import {Carousel} from 'react-materialize'
 import $ from 'jquery';
 import cplus from './assets/c++-icon.png';

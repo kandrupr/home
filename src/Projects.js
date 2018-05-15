@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Projects.css'
+import './css/Projects.css'
 import $ from 'jquery';
 import {Button, Card, CardTitle, Col} from 'react-materialize'
 import movieR from './assets/movieR.jpg';

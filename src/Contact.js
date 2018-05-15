@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Contact.css';
+import './css/Contact.css';
 import {Button, Col, Input, ProgressBar, Toast} from 'react-materialize'
 import $ from "jquery";
 

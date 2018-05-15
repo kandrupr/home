@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Skills.css';
+import './css/Skills.css';
 import Typed from 'typed.js'
 
 var typed;
@@ -83,7 +83,7 @@ class Typer extends Component {
     render() {
         return (
             <div id="typedBody">
-                &nbsp;kandrupr@github.io:~$ <span id="typedSpan" ref="head"></span>
+                &nbsp;kandrupr@github.io:~$ <span id="typedSpan" ref="head" />
             </div>
         );
     }
