@@ -12,8 +12,15 @@ import {Row, Col} from 'react-materialize'
 var firstAbout = true;
 var firstSkill = true;
 var firstProjects = true;
+var firstContact = true;
 
 class Layout extends Component {
+    constructor() {
+        super();
+        this.state = {
+            current: "home"
+        };
+    }
     inView(elem) {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
@@ -25,34 +32,65 @@ class Layout extends Component {
     }
 
     componentDidMount() {
+        // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
+
         var that = this;
-
         $(window).scroll(function() {
+            if(that.inView("#homeFinder")){
+                if(that.state.current !== "home") {
+                    $(".navTitle").css("color", "#FFFFFF");
+                    that.setState({current: "home"});
+                }
 
-            if(that.inView("#aboutFinder")) {
-                //$(".navTitle").css("color", "#FFFFFF");
-                if(firstAbout) {
-                    firstAbout = false;
-                    $("#aboutLeft").fadeIn(2000);
-                    $("#aboutRight").fadeIn(2000);
+            } else if(that.inView("#aboutFinder")) {
+                if(that.state.current !== "about") {
+                    if(firstAbout) {
+                        firstAbout = false;
+                        $("#aboutLeft").fadeIn(2000);
+                        $("#aboutRight").fadeIn(2000);
+                        console.log("About First");
+                    } else {
+                        console.log("About Last");
+                    }
+                    // Nav Change
+                    $(".navTitle").css("color", "#FFFFFF");
+                    that.setState({current: "about"});
                 }
-            } else if(that.inView("#typedBody")) {
-                if(firstSkill) {
-                    firstSkill = false;
-                    that.refs.skills.startTyping();
-                }
-            } else if(that.inView("#projectsFinder")) {
-                //$(".navTitle").css("color", "#E14100");
-                if(firstProjects) {
+            } else if(that.inView("#projectsStart")) {
+                if (firstProjects) {
                     firstProjects = false;
                     $("#projectsTopSlider").addClass('animated bounceInRight');
                     $("#projectsForeground").addClass('animated bounceInLeft');
-
-
                 }
-            } /*else if(that.inView()) {
-
-            }*/
+                if(that.inView("#projectsFinder")){
+                    if(that.state.current !== "projects") {
+                        console.log("projects");
+                        // Nav Change
+                        $(".navTitle").css("color", "#FFFFFF");
+                        that.setState({current: "projects"});
+                    }
+                }
+            } else if(that.inView("#skillsFinder")) {
+                if(that.state.current !== "skills") {
+                    if (firstSkill) {
+                        firstSkill = false;
+                        that.refs.skills.startTyping();
+                    }
+                    // Nav Change
+                    $(".navTitle").css("color", "#FFFFFF");
+                    that.setState({current: "skills"});
+                }
+            } else if(that.inView("#contactFinder")) {
+                if(that.state.current !== "contact") {
+                    if (firstContact) {
+                        firstContact = false;
+                        // something cool?
+                    }
+                    // Nav Change
+                    $(".navTitle").css("color", "#FFFFFF");
+                    that.setState({current: "contact"});
+                }
+            }
         });
     }
 

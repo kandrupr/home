@@ -158,6 +158,7 @@ class Contact extends Component {
     render() {
         return (
             <Col s={12} id="contact">
+                <div id="contactFinder" className="finder"></div>
                 <Col id="contactContent" className="contactCenter" s={6}>
                     <Col id="contactHeader" s={12}>
                         <p>HI</p>

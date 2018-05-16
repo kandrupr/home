@@ -101,7 +101,8 @@ class Projects extends Component {
     render() {
         return (
             <Col id="projects" s={12}>
-                <div id="projectsFinder"></div>
+                <div id="projectsStart"></div>
+                <div id="projectsFinder" className="finder"></div>
                 <Col id="projectsBackground" s={12}>
                     <div id="projectsBackTop">
                         <div id="projectsHeader">

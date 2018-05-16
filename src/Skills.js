@@ -28,6 +28,7 @@ class Skills extends Component {
     render() {
         return (
             <div id="skills">
+                <div id="skillsFinder" className="finder"></div>
                 <div id="skillsTop">
                     <h1 id="section">Skills</h1>
                 </div>

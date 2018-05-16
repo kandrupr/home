@@ -6,7 +6,7 @@ class About extends Component {
     render() {
         return (
             <div id="about">
-                <div id="aboutFinder"></div>
+                <div id="aboutFinder" className="finder"></div>
                 <div id="aboutTop">
                     <div id="aboutTopLeft"></div>
                     <div id="aboutTopRight"><h1>About</h1></div>
