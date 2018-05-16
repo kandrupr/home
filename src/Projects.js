@@ -36,11 +36,7 @@ class Projects extends Component {
     }
 
     createProjectHolder() {
-        //console.log(window.innerWidth);
-        setTimeout(function() {
-            console.log(window.innerWidth);
-        }, 1000);
-        if(window.innerWidth < 900) {
+        if(window.innerWidth < 1024) {
             const settings = {
                 dots: true,
                 infinite: true,

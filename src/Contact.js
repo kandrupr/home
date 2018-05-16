@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './css/Contact.css';
-import {Button, Col, Input, ProgressBar, Toast} from 'react-materialize'
+import {Button, Col, Input, ProgressBar} from 'react-materialize'
 import $ from "jquery";
 
 class Contact extends Component {
@@ -42,7 +42,7 @@ class Contact extends Component {
 
 
     validateEmail(email) {
-        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
 
@@ -81,7 +81,6 @@ class Contact extends Component {
         } else {
             $("#emailFail").css("display", "none");
         }
-        // window.Materialize.toast('I am a toast!', 2000);
     }
 
     submitSuccess() {
@@ -89,18 +88,16 @@ class Contact extends Component {
         var failMessages = ["#nameFail", "#emailFail","#subjectFail", "#messageFail"];
         for(var i = 0; i< failMessages.length; i++) {
             $(failMessages[i]).css("display", "none");
-            $(inputText + i).val("");
             $(inputText + i).prop("disabled", true);
         }
-        var that = this;
+        var data = {
+            "name" : this.state.name,
+            "email" : this.state.email,
+            "subject" : this.state.subject,
+            "message" : this.state.message
+        };
         this.setState({sending: true});
-        setTimeout(function() {
-            for(var i = 0; i < failMessages.length; i++) {
-                $(inputText + i).prop("disabled", false);
-            }
-            that.setState({sending: false});
-        }, 3000);
-        // Mail
+        this.sendMail(data, inputText, failMessages);
     }
 
     sending() {
@@ -119,6 +116,43 @@ class Contact extends Component {
                 </Col>
             );
         }
+    }
+
+    sendMail(data, inputText, failMessages) {
+        var that = this;
+
+        $.ajax({
+            url: "https://webdev.cse.msu.edu/~kandrupr/mailman/sendmail.php",
+            type: "post",
+            data: data,
+            timeout: 10000,
+            success: function (response) {
+                if(response.operation) {
+                    for(var i = 0; i < failMessages.length; i++) {
+                        $(inputText + i).val("");
+                        $(inputText + i).prop("disabled", false);
+                    }
+                    window.Materialize.toast("I'll get back to you soon!", 2000);
+                } else {
+                    for(var j = 0; j < failMessages.length; j++) {
+                        $(inputText + j).prop("disabled", false);
+                    }
+                    window.Materialize.toast('Missing some data! Try again!', 2000);
+                }
+                that.setState({sending: false});
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                for(var j = 0; j < failMessages.length; j++) {
+                    $(inputText + j).prop("disabled", false);
+                }
+                if(textStatus==="timeout") {
+                    window.Materialize.toast('Took to long to connect! Try again!', 2000);
+                } else {
+                    window.Materialize.toast('Something went wrong! Try again!', 2000);
+                }
+                that.setState({sending: false});
+            }
+        });
     }
 
     render() {
