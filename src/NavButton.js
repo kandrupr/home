@@ -5,16 +5,10 @@ class NavButton extends Component {
     constructor(props) {
         super(props);
         this.title = props.name;
-        this.state = {loaded: false};
-    }
-    componentDidMount() {
-        this.setState({loaded: true});
     }
 
     scrollTo() {
-        if(this.state.loaded) {
-            document.getElementById(this.title).scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
-        }
+        document.getElementById(this.title).scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
     }
 
     render() {
