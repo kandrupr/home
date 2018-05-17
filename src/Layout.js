@@ -18,7 +18,8 @@ class Layout extends Component {
     constructor() {
         super();
         this.state = {
-            current: "home"
+            current: "home",
+            firstP: "#projectsStart"
         };
     }
     inView(elem) {
@@ -37,6 +38,7 @@ class Layout extends Component {
         var that = this;
         $(window).scroll(function() {
             if(that.inView("#homeFinder")){
+                window.history.pushState(null, '', '/home');
                 if(that.state.current !== "home") {
                     $(".navTitle").css("color", "#FFFFFF");
                     that.setState({current: "home"});
@@ -44,6 +46,7 @@ class Layout extends Component {
 
             } else if(that.inView("#aboutFinder")) {
                 if(that.state.current !== "about") {
+                    window.history.pushState(null, '', '/about');
                     if(firstAbout) {
                         firstAbout = false;
                         $("#aboutLeft").fadeIn(2000);
@@ -56,22 +59,24 @@ class Layout extends Component {
                     $(".navTitle").css("color", "#FFFFFF");
                     that.setState({current: "about"});
                 }
-            } else if(that.inView("#projectsStart")) {
+            } else if(that.inView(that.state.firstP)) {
                 if (firstProjects) {
                     firstProjects = false;
                     $("#projectsTopSlider").addClass('animated bounceInRight');
                     $("#projectsForeground").addClass('animated bounceInLeft');
-                }
-                if(that.inView("#projectsFinder")){
+                } else {
                     if(that.state.current !== "projects") {
                         console.log("projects");
                         // Nav Change
                         $(".navTitle").css("color", "#FFFFFF");
-                        that.setState({current: "projects"});
                     }
                 }
+                window.history.pushState(null, '', '/projects');
+                that.setState({current: "projects", firstP: "#projectsFinder"});
+
             } else if(that.inView("#skillsFinder")) {
                 if(that.state.current !== "skills") {
+                    window.history.pushState(null, '', '/skills');
                     if (firstSkill) {
                         firstSkill = false;
                         that.refs.skills.startTyping();
@@ -82,6 +87,7 @@ class Layout extends Component {
                 }
             } else if(that.inView("#contactFinder")) {
                 if(that.state.current !== "contact") {
+                    window.history.pushState(null, '', '/contact');
                     if (firstContact) {
                         firstContact = false;
                         // something cool?
