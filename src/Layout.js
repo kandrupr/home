@@ -34,7 +34,7 @@ class Layout extends Component {
 
     componentDidMount() {
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
-        window.history.pushState(null, '', '/');
+        window.history.replaceState(null, '', '/');
 
         var that = this;
         $(window).scroll(function() {
