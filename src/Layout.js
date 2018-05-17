@@ -34,11 +34,11 @@ class Layout extends Component {
 
     componentDidMount() {
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
+        window.history.pushState(null, '', '/');
 
         var that = this;
         $(window).scroll(function() {
             if(that.inView("#homeFinder")){
-                window.history.pushState(null, '', '/home');
                 if(that.state.current !== "home") {
                     $(".navTitle").css("color", "#FFFFFF");
                     that.setState({current: "home"});
@@ -46,7 +46,6 @@ class Layout extends Component {
 
             } else if(that.inView("#aboutFinder")) {
                 if(that.state.current !== "about") {
-                    window.history.pushState(null, '', '/about');
                     if(firstAbout) {
                         firstAbout = false;
                         $("#aboutLeft").fadeIn(2000);
@@ -71,12 +70,10 @@ class Layout extends Component {
                         $(".navTitle").css("color", "#FFFFFF");
                     }
                 }
-                window.history.pushState(null, '', '/projects');
                 that.setState({current: "projects", firstP: "#projectsFinder"});
 
             } else if(that.inView("#skillsFinder")) {
                 if(that.state.current !== "skills") {
-                    window.history.pushState(null, '', '/skills');
                     if (firstSkill) {
                         firstSkill = false;
                         that.refs.skills.startTyping();
@@ -87,7 +84,6 @@ class Layout extends Component {
                 }
             } else if(that.inView("#contactFinder")) {
                 if(that.state.current !== "contact") {
-                    window.history.pushState(null, '', '/contact');
                     if (firstContact) {
                         firstContact = false;
                         // something cool?
