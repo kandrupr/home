@@ -35,52 +35,40 @@ class Layout extends Component {
     componentDidMount() {
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
         window.history.replaceState(null, '', '/');
+        this.changeNavColor("home");
 
         var that = this;
         $(window).scroll(function() {
             if(that.inView("#homeFinder")){
                 if(that.state.current !== "home") {
-                    $(".navTitle").css("color", "#FFFFFF");
-                    that.setState({current: "home"});
+                    that.changeNavColor("home");
                 }
-
             } else if(that.inView("#aboutFinder")) {
                 if(that.state.current !== "about") {
                     if(firstAbout) {
                         firstAbout = false;
                         $("#aboutLeft").fadeIn(2000);
                         $("#aboutRight").fadeIn(2000);
-                        console.log("About First");
-                    } else {
-                        console.log("About Last");
                     }
-                    // Nav Change
-                    $(".navTitle").css("color", "#FFFFFF");
-                    that.setState({current: "about"});
+                    that.changeNavColor("about");
                 }
             } else if(that.inView(that.state.firstP)) {
-                if (firstProjects) {
-                    firstProjects = false;
-                    $("#projectsTopSlider").addClass('animated bounceInRight');
-                    $("#projectsForeground").addClass('animated bounceInLeft');
-                } else {
-                    if(that.state.current !== "projects") {
-                        console.log("projects");
-                        // Nav Change
-                        $(".navTitle").css("color", "#FFFFFF");
+                if(that.state.current !== "projects") {
+                    if (firstProjects) {
+                        firstProjects = false;
+                        $("#projectsTopSlider").addClass('animated bounceInRight');
+                        $("#projectsForeground").addClass('animated bounceInLeft');
+                        that.setState({firstP: "#projectsFinder"});
                     }
+                    that.changeNavColor("projects");
                 }
-                that.setState({current: "projects", firstP: "#projectsFinder"});
-
             } else if(that.inView("#skillsFinder")) {
                 if(that.state.current !== "skills") {
                     if (firstSkill) {
                         firstSkill = false;
                         that.refs.skills.startTyping();
                     }
-                    // Nav Change
-                    $(".navTitle").css("color", "#FFFFFF");
-                    that.setState({current: "skills"});
+                    that.changeNavColor("skills");
                 }
             } else if(that.inView("#contactFinder")) {
                 if(that.state.current !== "contact") {
@@ -88,12 +76,15 @@ class Layout extends Component {
                         firstContact = false;
                         // something cool?
                     }
-                    // Nav Change
-                    $(".navTitle").css("color", "#FFFFFF");
-                    that.setState({current: "contact"});
+                    that.changeNavColor("contact");
                 }
             }
         });
+    }
+
+    changeNavColor(a) {
+        this.refs.nav.changeNav(this.state.current, a);
+        this.setState({current: a});
     }
 
     render() {

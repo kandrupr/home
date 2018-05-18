@@ -1,13 +1,41 @@
 import React, { Component } from 'react';
 import NavButton from './NavButton'
 import './css/Nav.css';
+import $ from "jquery";
 
+const navColors  = {
+    "home" : "#FFFFFF",
+    "about" : "#FFFFFF",
+    "skills" : "#2DA1A1",
+    "projects" : "#FFFFFF",
+    "contact" : "#FFFFFF"
+};
 
+var maps;
 class Nav extends Component {
+    componentDidMount() {
+        maps = {
+            "home" : this.refs.navHome,
+            "about" : this.refs.navAbout,
+            "skills" : this.refs.navSkills,
+            "projects" : this.refs.navProjects,
+            "contact" : this.refs.navContact
+        };
+    }
+
+    changeNav(a, b) {
+        $(".navTitle").css({
+            color : navColors[b],
+            transition : 'color 0.5s linear'
+        });
+        maps[a].inactiveNav();
+        maps[b].activeNav();
+    }
+
     render() {
         return (
             <div id="nav">
-                <div id="navHolder">
+                <div ref="navHolder" id="navHolder">
                     <NavButton ref="navHome" name="home"/>
                     <NavButton ref="navAbout" name="about"/>
                     <NavButton ref="navSkills" name="skills"/>

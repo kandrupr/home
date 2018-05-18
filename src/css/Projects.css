@@ -71,6 +71,11 @@
     transform: translate(-50%, -50%);
 }
 
+#projectsStart {
+    position: relative;
+    top: 5%;
+}
+
 .slick-arrow {
     display: none !important;
 }

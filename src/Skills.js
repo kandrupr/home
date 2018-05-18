@@ -50,7 +50,7 @@ class Skills extends Component {
                             </div>
                             <Typer ref="terminal" />
                         </div>
-                        <p id="resume">Lorem</p>
+                        <p id="resume">For a comprehensive list, check out my <a href="">resume.</a></p>
                     </div>
                 </div>
             </div>

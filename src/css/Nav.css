@@ -37,6 +37,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.navTitle:hover {
+    border-left: 1px solid;
+}
+
+.navActive, .navActive:hover {
+    border-left: 2px solid;
+}
+
+
 @media (min-width: 1025px) {
     #nav {
         position:fixed;

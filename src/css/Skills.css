@@ -105,6 +105,12 @@
     bottom: 3%;
 }
 
+#resume a {color: #2DA1A1;}
+
+#resume a:hover {
+    color: #e1c700;
+}
+
 @media (min-width: 1500px) {
     .carousel {
         transform: translateX(20%) translateY(-40%) rotateZ(90deg);
