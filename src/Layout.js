@@ -19,7 +19,6 @@ class Layout extends Component {
         super();
         this.state = {
             current: "home",
-            firstP: "#projectsStart"
         };
     }
     inView(elem) {
@@ -52,14 +51,8 @@ class Layout extends Component {
                     }
                     that.changeNavColor("about");
                 }
-            } else if(that.inView(that.state.firstP)) {
+            } else if(that.inView("#projectsFinder")) {
                 if(that.state.current !== "projects") {
-                    if (firstProjects) {
-                        firstProjects = false;
-                        $("#projectsTopSlider").addClass('animated bounceInRight');
-                        $("#projectsForeground").addClass('animated bounceInLeft');
-                        that.setState({firstP: "#projectsFinder"});
-                    }
                     that.changeNavColor("projects");
                 }
             } else if(that.inView("#skillsFinder")) {
@@ -69,6 +62,13 @@ class Layout extends Component {
                         that.refs.skills.startTyping();
                     }
                     that.changeNavColor("skills");
+                }
+                if(firstProjects){
+                    if (that.inView("#projectsStart")) {
+                        firstProjects = false;
+                        $("#projectsTopSlider").addClass('animated bounceInRight');
+                        $("#projectsForeground").addClass('animated bounceInLeft');
+                    }
                 }
             } else if(that.inView("#contactFinder")) {
                 if(that.state.current !== "contact") {
