@@ -39,12 +39,13 @@
 
 .navTitle:hover {
     border-left: 1px solid;
+    cursor: pointer;
 }
 
 .navActive, .navActive:hover {
     border-left: 2px solid;
+    cursor: pointer;
 }
-
 
 @media (min-width: 1025px) {
     #nav {

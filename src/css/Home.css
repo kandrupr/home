@@ -1,7 +1,13 @@
 #home {
     height: 100vh;
-    background-color: black;
+    background-image: url("../assets/spiration.png");
     position: relative;
+    animation: moveRight 5s linear infinite;
+}
+
+@keyframes moveRight {
+    from {background-position: left;}
+    to {background-position: right;}
 }
 
 #homeCenter{
@@ -92,9 +98,4 @@
     #homeCenter {
         display: none;
     }
-}
-
-.fail {
-    display: none;
-    color: red;
 }

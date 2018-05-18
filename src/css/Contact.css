@@ -1,7 +1,7 @@
 #contact {
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
-    background-color: slategray;
+    background-image: url("../assets/hex.png");
     float: right;
     position: relative;
     display: flex;
@@ -37,7 +37,7 @@
 }
 
 #input_3::-webkit-scrollbar-thumb {
-    background: red;
+    background: #FFB2B2;
     border-radius: 5px;
 }
 
@@ -45,6 +45,30 @@
     background: #b30000;
 }
 
+.input-field input {
+    border-bottom: 1px solid #121212;
+}
+
+.input-field label {
+    color: #121212;
+}
+
 #contactSubmit {
     border-radius: 10px;
+    color: #ECECEC;
+    background-color: #FFB2B2;
+}
+
+.input-field label.active {
+    color: #FFB2B2 !important;
+}
+
+input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #FFB2B2;
+    box-shadow: 0 1px #FFB2B2;
+}
+
+.fail {
+    display: none;
+    color: #FFB2B2;
 }

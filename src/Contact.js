@@ -111,7 +111,7 @@ class Contact extends Component {
             return (
                 <Col s={12}>
                     <Col s={5} />
-                    <Button s={2} type="submit" id="contactSubmit" waves='light'>Submit</Button>
+                    <Button s={2} type="submit" id="contactSubmit" waves='light'>Send</Button>
                     <Col style={{float: "right"}} s={5} />
                 </Col>
             );

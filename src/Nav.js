@@ -7,8 +7,8 @@ const navColors  = {
     "home" : "#FFFFFF",
     "about" : "#FFFFFF",
     "skills" : "#2DA1A1",
-    "projects" : "#FFFFFF",
-    "contact" : "#FFFFFF"
+    "projects" : "#D34C87",
+    "contact" : "#121212"
 };
 
 var maps;

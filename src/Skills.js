@@ -14,7 +14,6 @@ class Skills extends Component {
     componentDidMount() {
         var that = this;
         var children = $(".carousel").children();
-        console.log(children[0]);
         $(".carousel-item").click( function() {
             var a = children.index(this);
             that.refs.terminal.resumeTyping(a);
