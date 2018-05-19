@@ -1,6 +1,10 @@
 #skills {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
+    /* Sayagata Variation
+     * Original from  Toptal Subtle Patterns
+     * at https://www.toptal.com/designers/subtlepatterns/japanese-sayagata/
+     * by Olga Libby*/
     background-image: url("../assets/sayagata-red.png");
 }
 

@@ -43,11 +43,19 @@
 #projectsBackTop {
     height: 60vh;
     position: relative;
+    /* Seigaiha Variation
+     * Original from  Toptal Subtle Patterns
+     * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
+     * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-blue.png");
 }
 
 #projectsBackBot {
     height: 40vh;
+    /* Seigaiha Variation
+     * Original from  Toptal Subtle Patterns
+     * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
+     * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-white.png");
 }
 
