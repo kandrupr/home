@@ -109,10 +109,8 @@ class Contact extends Component {
             );
         } else {
             return (
-                <Col s={12}>
-                    <Col s={5} />
+                <Col s={12} style={{textAlign: 'center'}}>
                     <Button s={2} type="submit" id="contactSubmit" waves='light'>Send</Button>
-                    <Col style={{float: "right"}} s={5} />
                 </Col>
             );
         }
@@ -158,11 +156,19 @@ class Contact extends Component {
     render() {
         return (
             <Col s={12} id="contact">
+                <Col id="contactHeader" className="contactCenter" s={6}>
+                    <Col s={11}>
+                        <h2>Contact</h2>
+                    </Col>
+                </Col>
+                <Col id="contactIntro" className="contactCenter" s={6}>
+                    <Col s={11}>
+                        <p>Reach out to me if you have any questions or just want to say hello!</p>
+                    </Col>
+                </Col>
                 <Col id="contactContent" className="contactCenter" s={6}>
                     <div id="contactFinder" className="finder"></div>
-                    <Col id="contactHeader" s={12}>
-                        <p>HI</p>
-                    </Col>
+
                     <form onSubmit={this.submit.bind(this)}>
                         <div id="contactShaker">
                             <Col s={5}>

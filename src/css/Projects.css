@@ -42,20 +42,19 @@
 
 #projectsBackTop {
     height: 60vh;
-    background-color: rgba(01, 161, 193, 0.7);
     position: relative;
+    background-image: url("../assets/seigaiha-strong-blue.png");
 }
 
 #projectsBackBot {
     height: 40vh;
-    background-color: rgba(250, 250, 250, 0.7);
+    background-image: url("../assets/seigaiha-strong-white.png");
 }
 
 #projectsBackground {
     position: absolute;
     height: 100vh;
     z-index: 1;
-    background-image: url("../assets/seigaiha-strong.png");
 }
 
 #projectsForeground {

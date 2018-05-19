@@ -15,8 +15,20 @@
 .input-field.col label {
     left: 0;
 }
+
 #contactContent {
     top: 50%;
+    transform: translate(-50%,-50%)
+}
+
+#contactHeader {
+    text-align: center;
+    top: 15%;
+    transform: translate(-50%,-50%)
+}
+
+#contactIntro {
+    top: 25%;
     transform: translate(-50%,-50%)
 }
 
@@ -45,7 +57,7 @@
     background: #b30000;
 }
 
-.input-field input {
+.input-field input, textarea.materialize-textarea {
     border-bottom: 1px solid #121212;
 }
 
@@ -59,7 +71,7 @@
     background-color: #FFB2B2;
 }
 
-.input-field label.active {
+.input-field label.active, input[type=text]:focus:not([readonly])+label{
     color: #FFB2B2 !important;
 }
 
@@ -71,4 +83,42 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
 .fail {
     display: none;
     color: #FFB2B2;
+}
+
+.progress {
+    background-color: transparent;
+}
+
+.progress .indeterminate{
+    background-color: #FFB2B2;
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    #contactShaker {
+        font-size: 1.75em;
+    }
+
+    .input-field, .input-field label {
+        font-size: 1.75rem;
+    }
+
+    #contactSubmit {
+        font-size: 1.75rem !important;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
+    #contactIntro{
+        display: none;
+    }
+
+    #contactHeader {
+        text-align: center;
+        top: 5%;
+        transform: translate(-50%,-50%)
+    }
+
+    #contactHeader h2{
+        font-size: 1.75rem;
+    }
 }

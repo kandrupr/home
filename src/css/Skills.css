@@ -1,20 +1,18 @@
 #skills {
     font-family: 'Roboto', sans-serif;
     height: 100vh;
-    background-image: url("../assets/diagonal-striped.png");
+    background-image: url("../assets/sayagata-red.png");
 }
 
 #skillsTop {
     height: 0;
     position: relative;
     display: none;
-    background-color: rgba(161, 46, 46, 0.7);
 }
 
 #skillsBot {
     height: 100%;
     position: relative;
-    background-color: rgba(161, 46, 46, 0.7);
 }
 
 #left {
