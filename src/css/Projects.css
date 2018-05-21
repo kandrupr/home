@@ -121,3 +121,17 @@
         height: 250px;
     }
 }
+
+@media (min-width: 0px) and (max-width: 300px) {
+    #projectsHeader {
+        display: none;
+    }
+
+    #projectsTopSlider {
+        display: none;
+    }
+
+    #projectHolder {
+        display: none;
+    }
+}

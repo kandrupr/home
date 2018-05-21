@@ -124,3 +124,17 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
         font-size: 1.75rem;
     }
 }
+
+@media (min-width: 0px) and (max-width: 300px) {
+    #contactHeader {
+        display: none;
+    }
+
+    #contactIntro {
+        display: none;
+    }
+
+    #contactContent {
+        display: none;
+    }
+}

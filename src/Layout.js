@@ -45,9 +45,11 @@ class Layout extends Component {
             } else if(that.inView("#aboutFinder")) {
                 if(that.state.current !== "about") {
                     if(firstAbout) {
-                        firstAbout = false;
-                        $("#aboutLeft").fadeIn(2000);
-                        $("#aboutRight").fadeIn(2000);
+                        if(window.innerWidth > 300) {
+                            firstAbout = false;
+                            $("#aboutLeft").fadeIn(2000);
+                            $("#aboutRight").fadeIn(2000);
+                        }
                     }
                     that.changeNavColor("about");
                 }

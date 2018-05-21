@@ -194,10 +194,10 @@
 
 @media (min-width: 0px) and (max-width: 300px) {
     #aboutLeft {
-        display: none;
+        display: none !important;
     }
 
     #aboutRight {
-        display: none;
+        display: none !important;
     }
 }
