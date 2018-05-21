@@ -109,8 +109,8 @@ class Projects extends Component {
                             <p>Projects</p>
                         </div>
                         <div id="projectsTopSlider">
-                            <p id="projectsGithub">Projects</p>
-                            <p>See what I'm working on<Button waves='light'><img src={githubIcon} alt="github"/></Button></p>
+                            <h2>Projects</h2>
+                            <p id="projectsGithub">See what I'm working on<Button waves='light'><img src={githubIcon} alt="github"/></Button></p>
                         </div>
                     </div>
                     <div id="projectsBackBot"></div>

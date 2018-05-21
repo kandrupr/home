@@ -67,9 +67,11 @@ class Layout extends Component {
                 }
                 if(firstProjects){
                     if (that.inView("#projectsStart")) {
-                        firstProjects = false;
-                        $("#projectsTopSlider").addClass('animated bounceInRight');
-                        $("#projectsForeground").addClass('animated bounceInLeft');
+                        if(window.innerWidth > 767) {
+                            firstProjects = false;
+                            $("#projectsTopSlider").addClass('animated bounceInRight');
+                            $("#projectsForeground").addClass('animated bounceInLeft');
+                        }
                     }
                 }
             } else if(that.inView("#contactFinder")) {

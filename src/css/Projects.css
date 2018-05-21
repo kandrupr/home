@@ -18,17 +18,22 @@
     width: 100%;
     height: 30%;
     top: 20%;
+    left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
 
-#projectsTopSlider p button{
-    border-radius: 10%;
+#projectsGithub button{
+    background-color: transparent;
+    box-shadow: none;
 }
 
-#projectsGithub{
+.btn {
+    padding: 0 0.75rem;
+}
+
+#projectsTopSlider h2{
     color: #ffab40;
-    font-size: 3vw;
     margin: 0;
 }
 
@@ -88,13 +93,38 @@
     display: none !important;
 }
 
+
+@media (min-width: 1025px) {
+    #projectsTopSlider {
+        left: 0;
+    }
+}
+
 @media (min-width: 900px) and (max-width: 1024px) {
     #projectHolder {
         left: 53%;
     }
+
+    #projectsTopSlider {
+        left: 0;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #projectsTopSlider {
+        left: 0;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 1024px) and (orientation: portrait) {
+    #projectsTopSlider {
+        top: 35%;
+    }
+
+    #projectsGithub {
+        font-size: 1.20rem;
+    }
 
 }
 

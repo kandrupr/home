@@ -134,7 +134,6 @@
 
 @media (min-width: 300px) and (max-width: 1024px) {
     #section {
-        font-family: 'Ubuntu Mono', monospace;
         height: 100%;
         margin: 0;
         padding-top: 15px;

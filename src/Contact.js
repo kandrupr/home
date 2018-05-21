@@ -153,16 +153,12 @@ class Contact extends Component {
         });
     }
 
-    widthColl() {
-        return window.innerWidth;
-    }
-
     render() {
         return (
             <Col s={12} id="contact">
                 <Col id="contactHeader" className="contactCenter" s={6}>
                     <Col s={11}>
-                        <h2>{this.widthColl()}</h2>
+                        <h2>Contact</h2>
                     </Col>
                 </Col>
                 <Col id="contactIntro" className="contactCenter" s={6}>
