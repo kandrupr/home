@@ -109,19 +109,33 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
     }
 }
 
+@media (min-width: 300px) and (max-width: 768px) {
+    #contactIntro {
+        display: none;
+    }
+}
+
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
-    #contactIntro{
+    #contactIntro, #contactHeader{
         display: none;
     }
 
-    #contactHeader {
-        text-align: center;
-        top: 5%;
-        transform: translate(-50%,-50%)
+    .input-field, .input-field label {
+        font-size: 1rem;
     }
 
-    #contactHeader h2{
-        font-size: 1.75rem;
+    #contactSubmit {
+        font-size: 1rem !important;
+    }
+
+    .fail {
+        display: none;
+        color: #FFB2B2;
+        font-size: 1rem !important;
+    }
+    textarea.materialize-textarea, input[type=text] {
+        height: 2.5rem !important;
+        min-height: 2.5rem !important;
     }
 }
 

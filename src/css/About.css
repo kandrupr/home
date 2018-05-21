@@ -193,6 +193,10 @@
 }
 
 @media (min-width: 0px) and (max-width: 300px) {
+    #aboutTop {
+        display: none !important;
+    }
+
     #aboutLeft {
         display: none !important;
     }
