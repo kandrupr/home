@@ -45,6 +45,16 @@
     color: #E1C700 !important;
 }
 
+@keyframes moveRight {
+    from {background-position: left;}
+    to {background-position: right;}
+}
+
+@keyframes moveLeft {
+    from {background-position: right;}
+    to {background-position: left;}
+}
+
 #projectsBackTop {
     height: 60vh;
     position: relative;
@@ -53,6 +63,7 @@
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-blue.png");
+    animation: moveRight 10s linear infinite;
 }
 
 #projectsBackBot {
@@ -62,6 +73,7 @@
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-white.png");
+    animation: moveLeft 10s linear infinite;
 }
 
 #projectsBackground {

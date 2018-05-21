@@ -6,6 +6,12 @@
      * at https://www.toptal.com/designers/subtlepatterns/japanese-sayagata/
      * by Olga Libby*/
     background-image: url("../assets/sayagata-red.png");
+    animation: moveReverseDiag 10s linear infinite;
+}
+
+@keyframes moveReverseDiag {
+    from {background-position: bottom right;}
+    to {background-position: top left;}
 }
 
 #skillsTop {

@@ -5,10 +5,10 @@
      * by Monika*/
     background-image: url("../assets/spiration.png");
     position: relative;
-    animation: moveRight 5s linear infinite;
+    animation: moveDown 5s linear infinite;
 }
 
-@keyframes moveRight {
+@keyframes moveDown {
     from {background-position: top;}
     to {background-position: bottom;}
 }
