@@ -1,11 +1,10 @@
 #contact {
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
+    height: 100vh;
     /* What the Hex from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/what-the-hex/
      * by Angel Micevski*/
     background-image: url("../assets/hex.png");
-    float: right;
     position: relative;
     display: flex;
 }
@@ -74,7 +73,7 @@
     background-color: #FFB2B2;
 }
 
-.input-field label.active, input[type=text]:focus:not([readonly])+label{
+.input-field label.active, input[type=text]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{
     color: #FFB2B2 !important;
 }
 
