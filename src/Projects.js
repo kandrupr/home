@@ -98,6 +98,9 @@ class Projects extends Component {
         }
     }
 
+    goToGithub() {
+        window.location.href = "https://github.com/kandrupr"
+    }
     render() {
         return (
             <Col id="projects" s={12}>
@@ -105,17 +108,17 @@ class Projects extends Component {
                 <div id="projectsFinder" className="finder"></div>
                 <Col id="projectsBackground" s={12}>
                     <div id="projectsBackTop">
-                        <div id="projectsHeader">
-                            <p>Projects</p>
-                        </div>
-                        <div id="projectsTopSlider">
-                            <h2>Projects</h2>
-                            <p id="projectsGithub">See what I'm working on<Button waves='light'><img src={githubIcon} alt="github"/></Button></p>
-                        </div>
                     </div>
                     <div id="projectsBackBot"></div>
                 </Col>
                 <Col id="projectsForeground" s={12}>
+                    <div id="projectsHeader">
+                        <p>Projects</p>
+                    </div>
+                    <div id="projectsTopSlider">
+                        <h2>Projects</h2>
+                        <p id="projectsGithub">See what I'm working on<Button waves='light' id="githubButton" onClick={this.goToGithub}><img src={githubIcon} alt="github"/></Button></p>
+                    </div>
                     {this.createProjectHolder()}
                 </Col>
             </Col>

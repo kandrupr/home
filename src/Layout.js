@@ -70,7 +70,7 @@ class Layout extends Component {
                         if(window.innerWidth > 767) {
                             firstProjects = false;
                             $("#projectsTopSlider").addClass('animated bounceInRight');
-                            $("#projectsForeground").addClass('animated bounceInLeft');
+                            $("#projectHolder").addClass('animated bounceInLeft');
                         }
                     }
                 }

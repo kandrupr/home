@@ -17,7 +17,7 @@
     position: relative;
     width: 100%;
     height: 30%;
-    top: 20%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -28,8 +28,11 @@
     box-shadow: none;
 }
 
-.btn {
-    padding: 0 0.75rem;
+.githubButton {
+    padding: 0 !important;
+    margin: 0 0.5rem !important;
+    border-radius: 50% !important;
+
 }
 
 #projectsTopSlider h2{
@@ -63,7 +66,7 @@
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-blue.png");
-    animation: moveRight 10s linear infinite;
+    /*animation: moveRight 10s linear infinite;*/
 }
 
 #projectsBackBot {
@@ -73,13 +76,12 @@
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-white.png");
-    animation: moveLeft 10s linear infinite;
+    /*animation: moveLeft 10s linear infinite;*/
 }
 
 #projectsBackground {
     position: absolute;
     height: 100vh;
-    z-index: 1;
 }
 
 #projectsForeground {
@@ -105,10 +107,14 @@
     display: none !important;
 }
 
-
 @media (min-width: 1025px) {
     #projectsTopSlider {
-        left: 0;
+        left: -2%;
+    }
+
+    #projectHolder {
+        top: 35%;
+        left: 17%;
     }
 }
 
