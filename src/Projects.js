@@ -15,17 +15,18 @@ class Projects extends Component {
           resize: false
         };
         this.info = [
-            "BANJO",
-            "CAVOOI",
-            "HELIOS"
+            "Tired of scrolling through Netflix? Find movies that you'll like.",
+            "Discover new movies, learn about the old ones too.",
+            "Deep learning"
         ];
 
         this.links = [
             "https://goo.gl/AfpGX5",
             "https://github.com/kandrupr/MoviePast",
-            "#SOON"
+            "#Soon"
         ];
     }
+
     componentDidMount() {
         var that = this;
         $(window).resize(function() {

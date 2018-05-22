@@ -7,7 +7,7 @@ const navColors  = {
     "home" : "#FFFFFF",
     "about" : "#FFFFFF",
     "skills" : "#2DA1A1",
-    "projects" : "#D34C87",
+    "projects" : "#FFAB40",
     "contact" : "#121212"
 };
 
@@ -23,10 +23,11 @@ class Nav extends Component {
         };
     }
 
-    changeNav(a, b) {
+    changeNav(a, b, c='Roboto') {
         $(".navTitle").css({
             color : navColors[b],
-            transition : 'color 0.5s linear'
+            fontFamily : c,
+            transition : 'color 0.5s linear, font-size 1s ease, font-family 1s ease'
         });
         maps[a].inactiveNav();
         maps[b].activeNav();

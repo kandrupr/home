@@ -86,8 +86,8 @@ class Layout extends Component {
         });
     }
 
-    changeNavColor(a) {
-        this.refs.nav.changeNav(this.state.current, a);
+    changeNavColor(a, font) {
+        this.refs.nav.changeNav(this.state.current, a, font);
         this.setState({current: a});
     }
 

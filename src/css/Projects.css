@@ -2,6 +2,7 @@
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
 #projects {
+    font-family: 'Roboto', serif;
     height: 100vh;
 }
 
@@ -28,7 +29,7 @@
     box-shadow: none;
 }
 
-.githubButton {
+#githubButton {
     padding: 0 !important;
     margin: 0 0.5rem !important;
     border-radius: 50% !important;
@@ -36,16 +37,15 @@
 }
 
 #projectsTopSlider h2{
-    color: #ffab40;
     margin: 0;
 }
 
-.card, .card-title {
-    color:#E10047 !important;
+.card, #projectsTopSlider h2  {
+    color:#ffab40 !important;
 }
 
-.card-title {
-    color: #E1C700 !important;
+.card-title, .card-action, #projectsGithub {
+    color:#ffab40 !important;
 }
 
 @keyframes moveRight {
