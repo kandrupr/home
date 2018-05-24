@@ -67,7 +67,7 @@ class Layout extends Component {
                 }
                 if(firstProjects){
                     if (that.inView("#projectsStart")) {
-                        if(window.innerWidth > 767) {
+                        if(window.innerWidth > 1024) {
                             firstProjects = false;
                             $("#projectsTopSlider").addClass('animated bounceInRight');
                             $("#projectHolder").addClass('animated bounceInLeft');

@@ -63,6 +63,15 @@
     font-size: 1.1em;
 }
 
+#aboutBody p {
+    height: 100%;
+    word-break: break-all;
+    overflow-y: scroll;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
 @media (min-width: 300px) and (max-width: 1024px) {
     #aboutTop {
         display: block;
