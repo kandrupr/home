@@ -23,7 +23,7 @@ class Projects extends Component {
         this.links = [
             "https://goo.gl/AfpGX5",
             "https://github.com/kandrupr/MoviePast",
-            "#Soon"
+            "https://github.com/kandrupr/DogClassification"
         ];
     }
 
@@ -55,7 +55,7 @@ class Projects extends Component {
                             {this.createCard(1, "Movie Past", movieP, true)}
                         </Col>
                         <Col s={3}>
-                            {this.createCard(2, "Beat the Captcha", captcha, true)}
+                            {this.createCard(2, "What's That Dog", captcha, true)}
                         </Col>
                     </Slider>
                 </Col>
