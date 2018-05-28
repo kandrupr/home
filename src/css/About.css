@@ -31,6 +31,7 @@
     transform: translate(-50%, -50%);
     position: absolute;
     margin: 0;
+    color: white;
 }
 
 #aboutCenter img{
@@ -83,8 +84,12 @@
     word-break: break-all;
     overflow-y: auto;
     margin: 0;
-    padding-top: 10px;
-    padding-bottom: 40px;
+    padding: 10px 20px 40px 20px
+}
+
+#hobbies .chip {
+    background-color: #424242;
+    color: white;
 }
 
 @media (min-width: 300px) and (max-width: 1024px) {
@@ -120,6 +125,10 @@
         left: 50%;
         transform: translateX(-50%);
         font-size: 1.2em;
+    }
+
+    #hobbies {
+        display: none;
     }
 }
 
@@ -159,6 +168,10 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%,-50%);
+    }
+
+    #hobbies {
+        display: none;
     }
 }
 
@@ -213,6 +226,10 @@
         font-size: 65%;
         transform: translate(-50%,-50%);
 
+    }
+
+    #hobbies {
+        display: none;
     }
 }
 

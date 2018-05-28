@@ -72,7 +72,7 @@ class Projects extends Component {
                     </Col>
                     <Col s={1}/>
                     <Col s={3}>
-                        {this.createCard(2, "Beat the Captcha", captcha, false)}
+                        {this.createCard(2, "What's That Dog?", captcha, false)}
                     </Col>
                 </Col>
             );

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './css/About.css'
 import pkkanPhoto from './assets/pkkan-photo.jpg';
+import cplus from './assets/c++-icon.png'
+import {Chip} from 'react-materialize';
 
 class About extends Component {
     render() {
@@ -12,7 +14,16 @@ class About extends Component {
                     <div id="aboutTopRight"><h1>About</h1></div>
                 </div>
                 <div id="aboutLeft">
-                    <p id="aboutCenter"><img src={pkkanPhoto} alt="head-shot"/></p>
+                    <div id="aboutCenter">
+                        <img src={pkkanPhoto} alt="head-shot"/>
+                        <div id="hobbies">
+                            <p>Interests &amp; Hobbies: </p>
+                            <Chip>Running</Chip>
+                            <Chip>Film</Chip>
+                            <Chip>Basketball</Chip>
+                        </div>
+                    </div>
+
                 </div>
                 <div id="aboutRight">
                     <div id="aboutBody">
