@@ -9,6 +9,11 @@
 #aboutTop {
     display: none;
     background-color: #2F4F4F;
+    /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+    background-image: url("../assets/honey_green.png");
 }
 
 #aboutTop h1 {
@@ -41,6 +46,11 @@
     width: 20%;
     height: 100%;
     background-color: #2F4F4F;
+    /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+    background-image: url("../assets/honey_green.png");
 }
 
 #aboutRight {
@@ -51,6 +61,11 @@
     height: 100%;
     background-color: #424242;
     color: white;
+    /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+    background-image: url("../assets/honey_grey.png");
 }
 
 #aboutBody {
