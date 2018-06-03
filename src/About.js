@@ -28,7 +28,7 @@ class About extends Component {
                 <div id="aboutRight">
                     <div id="aboutBody">
                         <p>
-                            Lorem ipsum dolor sit amet, eu vocibus corpora mea, id duo dolorem inciderint, putent dicunt ad pro. Ei semper dicunt suscipiantur eum, ius ne amet fuisset reformidans. In eam mutat propriae indoctum. Id viderer cotidieque ullamcorper vix, tantas everti comprehensam ut ius. Pro in omnis rationibus, sea integre impedit te. Sea ei meis oblique nominati, harum dolore tamquam te ius, ad sea amet aliquid verterem.
+                            Lorem Lorem Lorem ipsum dolor sit amet, eu vocibus corpora mea, id duo dolorem inciderint, putent dicunt ad pro. Ei semper dicunt suscipiantur eum, ius ne amet fuisset reformidans. In eam mutat propriae indoctum. Id viderer cotidieque ullamcorper vix, tantas everti comprehensam ut ius. Pro in omnis rationibus, sea integre impedit te. Sea ei meis oblique nominati, harum dolore tamquam te ius, ad sea amet aliquid verterem.
 
                             Justo homero cu eum, utroque torquatos pro ad. Possim nostrum percipitur nec ad. Eos detracto ocurreret vituperata ad. Sea idque minimum cu, et est probo consetetur consectetuer.
 
