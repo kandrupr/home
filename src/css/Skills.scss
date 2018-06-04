@@ -1,0 +1,302 @@
+#skills {
+    font-family: 'Ubuntu Mono', monospace;
+    height: 100vh;
+    /* Sayagata Variation
+     * Original from  Toptal Subtle Patterns
+     * at https://www.toptal.com/designers/subtlepatterns/japanese-sayagata/
+     * by Olga Libby*/
+    background-image: url("../assets/sayagata-red.png");
+    animation: moveReverseDiag 10s linear infinite;
+}
+
+@keyframes moveReverseDiag {
+    from {background-position: bottom right;}
+    to {background-position: top left;}
+}
+
+#skillsTop {
+    height: 0;
+    position: relative;
+    display: none;
+}
+
+#skillsBot {
+    height: 100%;
+    position: relative;
+}
+
+#left {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+#right {
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+
+.carousel {
+    width: 200%;
+    height: 35%;
+}
+
+.carousel .carousel-item {
+    width: 120px !important;
+    height: 120px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.carousel .carousel-item img {
+    transform: rotateZ(-90deg);
+}
+
+#typedBox {
+    width: 60%;
+    height: 80%;
+    background-color: black;
+    transform: translateX(10%) translateY(7.5%);
+    border-radius: 10px;
+}
+
+#typedHeader {
+    width: 100%;
+    height: 10%;
+    background-color: #6a6a6a;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Ubuntu Mono', monospace;
+    text-align: center;
+    position: relative;
+}
+
+#typedHeader p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    font-size: 1.5em;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+#typedBody {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 90%;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 10px 10px 0 10px;
+}
+
+#resume {
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+
+.typed-cursor{
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+}
+
+#typedSpan {
+    white-space: pre;
+}
+
+#resume {
+    position: absolute;
+    left: 25%;
+    transform: translateX(0%);
+    bottom: 3%;
+}
+
+#resume a {color: #2DA1A1;}
+
+#resume a:hover {
+    color: #e1c700;
+    cursor: pointer;
+}
+
+@media (min-width: 1500px) {
+    .carousel {
+        transform: translateX(20%) translateY(-40%) rotateZ(90deg);
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1499px) {
+    .carousel {
+        transform: translateX(20%) translateY(-15%) rotateZ(90deg);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1299px) {
+    .carousel {
+        transform: translateX(20%) translateY(10%) rotateZ(90deg);
+    }
+}
+
+@media (min-width: 300px) and (max-width: 1024px) {
+    #section {
+        height: 100%;
+        margin: 0;
+        padding-top: 15px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #left {
+        width: 100%;
+        height: 20%;
+    }
+
+    #right {
+        width: 100%;
+        height: 80%;
+        position: relative;
+    }
+
+    #skillsTop {
+        display: block;
+        height: 7%;
+    }
+
+    #skillsBot {
+        height: 93%;
+    }
+    .carousel {
+        width: 100%;
+        height: 100%;
+        transform: translateX(0);
+    }
+
+    .carousel .carousel-item {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .carousel .carousel-item img {
+        transform: rotateZ(0deg);
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    #typedBox {
+        width: 80%;
+        height: 75%;
+        position: absolute;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+    }
+
+    #resume {
+        position: absolute;
+        left: 10%;
+        bottom: 6%;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+    #left {
+        height: 20%;
+    }
+
+    #right {
+        height: 80%;
+    }
+
+    .carousel .carousel-item {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .carousel .carousel-item img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    #typedBox {
+        width: 95%;
+        height: 75%;
+        top: 5%;
+        position: absolute;
+    }
+
+    #resume {
+        position: absolute;
+        left: 5%;
+        bottom: 6%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
+    #skillsTop {
+        display: none;
+    }
+
+    #skillsBot {
+        height: 100%;
+    }
+
+    #left {
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+    #right {
+        width: 80%;
+        height: 100%;
+    }
+
+    .carousel {
+        width: 200%;
+        height: 35%;
+        transform: translateX(20%) translateY(-40%) rotateZ(90deg);
+    }
+
+    .carousel .carousel-item {
+        width: 75px !important;
+        height: 75px !important;
+    }
+
+    .carousel .carousel-item img {
+        width: 75px !important;
+        height: 75px !important;
+        transform: rotateZ(-90deg);
+    }
+
+    #typedHeader p {
+        font-size: 1.3rem;
+    }
+
+    #typedBox {
+        left:0;
+        width: 70%;
+        height: 75%;
+        top: 5%;
+        position: absolute;
+        transform: translateX(0);
+    }
+
+    #resume {
+        position: absolute;
+        left: 0;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+    #skillsTop {
+        display: none;
+    }
+
+    #skillsBot {
+        display: none;
+    }
+}
+
+
+

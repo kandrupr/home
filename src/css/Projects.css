@@ -1,189 +1,142 @@
-@import "../../node_modules/slick-carousel/slick/slick.css";
-@import "../../node_modules/slick-carousel/slick/slick-theme.css";
-
+@import url(../../node_modules/slick-carousel/slick/slick.css);
+@import url(../../node_modules/slick-carousel/slick/slick-theme.css);
 #projects {
-    font-family: 'Roboto', serif;
-    height: 100vh;
-}
+  font-family: 'Roboto', serif;
+  height: 100vh; }
 
 #projectsHeader {
-    display: none;
-}
+  display: none; }
 
-#projectsHeader p{
-    margin: 0;
-}
+#projectsHeader p {
+  margin: 0; }
 
 #projectsTopSlider {
-    position: relative;
-    width: 100%;
-    height: 30%;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
+  position: relative;
+  width: 100%;
+  height: 30%;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
-#projectsGithub button{
-    background-color: transparent;
-    box-shadow: none;
-}
+#projectsGithub button {
+  background-color: transparent;
+  box-shadow: none; }
 
 #githubButton {
-    padding: 0 !important;
-    margin: 0 0.5rem !important;
-    border-radius: 50% !important;
+  padding: 0 !important;
+  margin: 0 0.5rem !important;
+  border-radius: 50% !important; }
 
-}
+#projectsTopSlider h2 {
+  margin: 0; }
 
-#projectsTopSlider h2{
-    margin: 0;
-}
-
-#projectsTopSlider h2  {
-    color:#ffab40 !important;
-}
+#projectsTopSlider h2 {
+  color: #ffab40 !important; }
 
 .card {
-    color:#c12101 !important;
-}
+  color: #c12101 !important; }
 
 #projectsGithub {
-    color:#ffab40 !important;
-}
+  color: #ffab40 !important; }
 
 @keyframes moveRight {
-    from {background-position: left;}
-    to {background-position: right;}
-}
+  from {
+    background-position: left; }
+  to {
+    background-position: right; } }
 
 @keyframes moveLeft {
-    from {background-position: right;}
-    to {background-position: left;}
-}
+  from {
+    background-position: right; }
+  to {
+    background-position: left; } }
 
 #projectsBackTop {
-    height: 60vh;
-    position: relative;
-    /* Seigaiha Variation
+  height: 60vh;
+  position: relative;
+  /* Seigaiha Variation
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
-    background-image: url("../assets/seigaiha-strong-blue.png");
-    /*animation: moveRight 10s linear infinite;*/
-}
+  background-image: url("../assets/seigaiha-strong-blue.png");
+  /*animation: moveRight 10s linear infinite;*/ }
 
 #projectsBackBot {
-    height: 40vh;
-    /* Seigaiha Variation
+  height: 40vh;
+  /* Seigaiha Variation
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
-    background-image: url("../assets/seigaiha-strong-white.png");
-    /*animation: moveLeft 10s linear infinite;*/
-}
+  background-image: url("../assets/seigaiha-strong-white.png");
+  /*animation: moveLeft 10s linear infinite;*/ }
 
 #projectsBackground {
-    position: absolute;
-    height: 100vh;
-}
+  position: absolute;
+  height: 100vh; }
 
 #projectsForeground {
-    position: relative;
-    height: 100vh;
-    z-index: 2;
-    background-color: transparent;
-}
+  position: relative;
+  height: 100vh;
+  z-index: 2;
+  background-color: transparent; }
 
 #projectHolder {
-    top: 65%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
+  top: 65%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%); }
 
 #projectsStart {
-    position: relative;
-    top: 5%;
-}
+  position: relative;
+  top: 5%; }
 
 .slick-arrow {
-    display: none !important;
-}
+  display: none !important; }
 
 @media (min-width: 1025px) {
-    #projectsTopSlider {
-        left: -2%;
-    }
-
-    #projectHolder {
-        top: 35%;
-        left: 17%;
-    }
-}
+  #projectsTopSlider {
+    left: -2%; }
+  #projectHolder {
+    top: 35%;
+    left: 17%; } }
 
 @media (min-width: 900px) and (max-width: 1024px) {
-    #projectHolder {
-        left: 53%;
-    }
-
-    #projectsTopSlider {
-        left: 0;
-    }
-}
-
+  #projectHolder {
+    left: 53%; }
+  #projectsTopSlider {
+    left: 0; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    #projectsTopSlider {
-        left: 50%;
-    }
-}
+  #projectsTopSlider {
+    left: 50%; } }
 
 @media (min-width: 300px) and (max-width: 1024px) and (orientation: portrait) {
-    #projectsTopSlider {
-        top: 35%;
-    }
-
-    #projectsGithub {
-        font-size: 1.20rem;
-    }
-
-}
+  #projectsTopSlider {
+    top: 35%; }
+  #projectsGithub {
+    font-size: 1.20rem; } }
 
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
-    #projectsTopSlider {
-        display: none;
-    }
-
-    #projectHolder {
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
-    }
-
-    .slick-list {
-        width: 265px;
-        height: 265px;
-        left: 50%;
-        transform: translateX(-50%) !important;
-    }
-
-    .card.small {
-        height: 250px;
-    }
-}
+  #projectsTopSlider {
+    display: none; }
+  #projectHolder {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%); }
+  .slick-list {
+    width: 265px;
+    height: 265px;
+    left: 50%;
+    transform: translateX(-50%) !important; }
+  .card.small {
+    height: 250px; } }
 
 @media (min-width: 0px) and (max-width: 300px) {
-    #projectsHeader {
-        display: none;
-    }
-
-    #projectsTopSlider {
-        display: none;
-    }
-
-    #projectHolder {
-        display: none;
-    }
-}
+  #projectsHeader {
+    display: none; }
+  #projectsTopSlider {
+    display: none; }
+  #projectHolder {
+    display: none; } }

@@ -1,0 +1,192 @@
+@import "Shared.scss";
+
+#about {
+    @include setMain($aboutBackgroundLeft);
+    font-family: $aboutFont;
+}
+
+#aboutTop {
+    /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+    background-image: url("../assets/honey_green.png");
+    display: none;
+    background-color: $aboutBackgroundLeft;
+}
+
+#aboutTop h1 {
+    height: 100%;
+    margin: 0;
+    padding-top: 15px;
+    font-size: 2rem;
+    text-align: center;
+    color: $colorWhite;
+}
+
+#aboutCenter {
+    @include transformXY(40%, 50%, -50%, -50%);
+    margin: 0;
+    color: $colorWhite;
+}
+
+#aboutCenter img {
+    @include setDim(15vw, 15vw);
+    border-radius: 50%;
+}
+
+#aboutLeft {
+    /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+    background-image: url("../assets/honey_green.png");
+    @include aboutComponents(20%, 100%, left, $aboutBackgroundLeft);
+}
+
+#aboutRight {
+    /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+    background-image: url("../assets/honey_grey.png");
+    @include aboutComponents(80%, 100%, right, $aboutBackgroundRight);
+    color: $colorWhite;
+}
+
+#aboutBody {
+    @include setDim(50%, 75%);
+    @include transformXY(50%, 14%, 0, -50%);
+    font-size: 1.1em;
+}
+
+#aboutBody p {
+    height: 100%;
+    word-break: break-all;
+    overflow-y: auto;
+    margin: 0;
+    padding: 10px 20px 40px 20px;
+}
+
+#hobbies .chip {
+    background-color: $aboutBackgroundRight;
+    color: $colorWhite;
+}
+
+@media (min-width: 300px) and (max-width: 1024px) {
+    #aboutTop {
+        display: block;
+        height: 7%;
+    }
+
+    #aboutLeft {
+        @include setDim(100%, 23%);
+    }
+
+    #aboutRight {
+        @include setDim(100%, 70%);
+    }
+
+    #aboutCenter {
+        top: 50%;
+        left: 50%;
+    }
+
+    #aboutCenter img {
+        @include setDim(35vw, 35vw);
+    }
+
+    #aboutBody {
+        @include setDim(80%, 100%);
+        @include transformXY(0, 50%, -50%, 0);
+        font-size: 1.2em;
+    }
+
+    #hobbies {
+        display: none;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
+    #aboutCenter {
+        top: 35%;
+        left: 50%;
+    }
+
+    #aboutTopLeft {
+        @include setDim(30%, 100%);
+        float: left;
+    }
+
+    #aboutTopRight {
+        @include setDim(70%, 100%);
+        float: right;
+        background-color: $aboutBackgroundRight;
+    }
+
+    #aboutLeft {
+        @include setDim(30%, 93%);
+    }
+
+    #aboutRight {
+        @include setDim(70%, 93%);
+    }
+
+    #aboutBody {
+        @include setDim(80%, 75%);
+        @include transformXY(40%, 50%, -50%, -50%);
+    }
+
+    #hobbies {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    #aboutCenter img {
+        @include setDim(27vw, 27vw);
+    }
+
+    #aboutBody {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+    #aboutCenter img{
+        @include setDim(32vw, 32vw);
+    }
+
+    #aboutBody {
+        font-size: 75%;
+    }
+}
+@media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
+    #aboutTop , #hobbies{
+        display: none;
+    }
+
+    #aboutLeft {
+        @include setDim(30%, 100%);
+    }
+
+    #aboutRight {
+        @include setDim(70%, 100%);
+    }
+
+    #aboutCenter img{
+        @include setDim(25vw, 25vw);
+    }
+
+    #aboutBody {
+        @include setDim(60%, 80%);
+        @include transformXY(50%, 35%, -50%, -50%);
+        font-size: 65%;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+    #aboutTop, #aboutLeft, #aboutRight {
+        display: none !important;
+    }
+}

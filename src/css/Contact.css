@@ -1,160 +1,120 @@
 #contact {
-    font-family: 'Fira Mono', monospace;
-    height: 100vh;
-    /* What the Hex from  Toptal Subtle Patterns
+  /* What the Hex from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/what-the-hex/
      * by Angel Micevski*/
-    background-image: url("../assets/hex.png");
-    position: relative;
-    display: flex;
-    animation: moveDiag 10s linear infinite;
-}
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: transparent;
+  font-family: "Fira Mono", monospace;
+  background-image: url("../assets/hex.png");
+  animation: moveDiag 10s linear infinite; }
 
 @keyframes moveDiag {
-    from {background-position: top left;}
-    to {background-position: bottom right;}
-}
+  from {
+    background-position: top left; }
+  to {
+    background-position: bottom right; } }
 
 .contactCenter {
-    position: absolute;
-    left: 50% !important;
-}
+  position: absolute;
+  left: 50% !important; }
 
 .input-field.col label {
-    left: 0;
-}
+  left: 0; }
 
 #contactContent {
-    top: 50%;
-    transform: translate(-50%,-50%)
-}
+  top: 50%;
+  transform: translate(-50%, -50%); }
 
 #contactHeader {
-    text-align: center;
-    top: 15%;
-    transform: translate(-50%,-50%)
-}
+  text-align: center;
+  top: 15%;
+  transform: translate(-50%, -50%); }
 
 #contactIntro {
-    top: 25%;
-    transform: translate(-50%,-50%)
-}
+  top: 25%;
+  transform: translate(-50%, -50%); }
 
 #input_3 {
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
-    max-height: 30vh;
-}
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 30vh; }
 
 #input_3::-webkit-scrollbar {
-    width: 10px;
-}
+  width: 10px; }
 
 #input_3::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 5px;
-}
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px; }
 
 #input_3::-webkit-scrollbar-thumb {
-    background: #FFB2B2;
-    border-radius: 5px;
-}
+  background: #FFB2B2;
+  border-radius: 5px; }
 
 #input_3::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
-}
+  background: #b30000; }
 
 .input-field input, textarea.materialize-textarea {
-    border-bottom: 1px solid #121212;
-}
+  border-bottom: 1px solid #121212; }
 
 .input-field label {
-    color: #121212;
-}
+  color: #121212; }
 
 #contactSubmit {
-    border-radius: 10px;
-    color: #ECECEC;
-    background-color: #FFB2B2;
-}
+  border-radius: 10px;
+  color: #ECECEC;
+  background-color: #FFB2B2; }
 
-.input-field label.active, input[type=text]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{
-    color: #FFB2B2 !important;
-}
+.input-field label.active, input[type=text]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #FFB2B2 !important; }
 
 input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #FFB2B2;
-    box-shadow: 0 1px #FFB2B2;
-}
+  border-bottom: 1px solid #FFB2B2;
+  box-shadow: 0 1px #FFB2B2; }
 
 .fail {
-    display: none;
-    color: #FFB2B2;
-}
+  display: none;
+  color: #FFB2B2; }
 
 .progress {
-    background-color: transparent;
-}
+  background-color: transparent; }
 
-.progress .indeterminate{
-    background-color: #FFB2B2;
-}
+.progress .indeterminate {
+  background-color: #FFB2B2; }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    #contactShaker {
-        font-size: 1.75em;
-    }
-
-    .input-field, .input-field label {
-        font-size: 1.75rem;
-    }
-
-    #contactSubmit {
-        font-size: 1.75rem !important;
-    }
-}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contactShaker {
+    font-size: 1.75em; }
+  .input-field, .input-field label {
+    font-size: 1.75rem; }
+  #contactSubmit {
+    font-size: 1.75rem !important; } }
 
 @media (min-width: 300px) and (max-width: 768px) {
-    #contactIntro {
-        display: none;
-    }
-}
+  #contactIntro {
+    display: none; } }
 
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
-    #contactIntro, #contactHeader{
-        display: none;
-    }
-
-    .input-field, .input-field label {
-        font-size: 1rem;
-    }
-
-    #contactSubmit {
-        font-size: 1rem !important;
-    }
-
-    .fail {
-        display: none;
-        color: #FFB2B2;
-        font-size: 1rem !important;
-    }
-    textarea.materialize-textarea, input[type=text] {
-        height: 2.5rem !important;
-        min-height: 2.5rem !important;
-    }
-}
+  #contactIntro, #contactHeader {
+    display: none; }
+  .input-field, .input-field label {
+    font-size: 1rem; }
+  #contactSubmit {
+    font-size: 1rem !important; }
+  .fail {
+    display: none;
+    color: #FFB2B2;
+    font-size: 1rem !important; }
+  textarea.materialize-textarea, input[type=text] {
+    height: 2.5rem !important;
+    min-height: 2.5rem !important; } }
 
 @media (min-width: 0px) and (max-width: 300px) {
-    #contactHeader {
-        display: none;
-    }
-
-    #contactIntro {
-        display: none;
-    }
-
-    #contactContent {
-        display: none;
-    }
-}
+  #contactHeader {
+    display: none; }
+  #contactIntro {
+    display: none; }
+  #contactContent {
+    display: none; } }

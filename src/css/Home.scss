@@ -1,0 +1,104 @@
+#home {
+    height: 100vh;
+    /* Spiration Dark from  Toptal Subtle Patterns
+     * at https://www.toptal.com/designers/subtlepatterns/spiration-dark/
+     * by Monika*/
+    background-image: url("../assets/spiration.png");
+    position: relative;
+    animation: moveDown 5s linear infinite;
+}
+
+@keyframes moveDown {
+    from {background-position: top;}
+    to {background-position: bottom;}
+}
+
+#homeCenter{
+    color: white;
+    padding: 0;
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+}
+
+#homeTitle{
+    float: left;
+}
+
+.anim {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.typed-cursor{
+    color: white;
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink{
+    50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+    0% { opacity: 1; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1; }
+}
+
+#homeCenter span.typed-cursor {
+    font-size: 450%;
+}
+
+.typed-fade-out{
+    opacity: 0;
+    transition: opacity .25s;
+    -webkit-animation: 0;
+    animation: 0;
+}
+
+.anim {
+    color: white;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    #home h2 {
+        font-size: 275%;
+    }
+
+    #homeCenter span.typed-cursor {
+        font-size: 400%;
+    }
+
+    .anim {
+        display: none;
+    }
+}
+
+@media (min-width: 301px) and (max-width: 599px) {
+    #home h2 {
+        font-size: 200%;
+        white-space: pre;
+    }
+
+    #homeCenter span.typed-cursor {
+        display: none;
+    }
+
+    .anim {
+        display: none;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+    .anim {
+        display: none;
+    }
+
+    #homeCenter {
+        display: none;
+    }
+}

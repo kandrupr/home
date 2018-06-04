@@ -1,0 +1,36 @@
+
+$aboutBackgroundLeft: #2F4F4F;
+$aboutBackgroundRight: #424242;
+$aboutFont: 'Roboto', sans-serif;
+
+$contactFont: 'Fira Mono', monospace;
+
+$colorWhite: white;
+
+@mixin aboutComponents($width, $height, $float, $backColor) {
+  width: $width;
+  height: $height;
+  position: relative;
+  float: $float;
+  display: none;
+  background-color: $backColor;
+}
+
+@mixin setMain($backColor) {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: $backColor;
+}
+
+@mixin transformXY($top, $left, $x, $y) {
+  top: $top;
+  left: $left;
+  transform: translate($x, $y);
+  position: absolute;
+}
+
+@mixin setDim($width, $height) {
+  width: $width;
+  height: $height;
+}

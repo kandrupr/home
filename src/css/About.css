@@ -1,248 +1,178 @@
 #about {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-color: #2F4F4F;
-}
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #2F4F4F;
+  font-family: "Roboto", sans-serif; }
 
 #aboutTop {
-    display: none;
-    background-color: #2F4F4F;
-    /* Light Honeycomb Variation
+  /* Light Honeycomb Variation
     * Original from  Toptal Subtle Patterns
     * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
     * by Federica Pelzel*/
-    background-image: url("../assets/honey_green.png");
-}
+  background-image: url("../assets/honey_green.png");
+  display: none;
+  background-color: #2F4F4F; }
 
 #aboutTop h1 {
-    height: 100%;
-    margin: 0;
-    padding-top: 15px;
-    font-size: 2rem;
-    text-align: center;
-    color: white;
-}
+  height: 100%;
+  margin: 0;
+  padding-top: 15px;
+  font-size: 2rem;
+  text-align: center;
+  color: white; }
 
 #aboutCenter {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  color: white; }
+
+#aboutCenter img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%; }
+
+#aboutLeft {
+  /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+  background-image: url("../assets/honey_green.png");
+  width: 20%;
+  height: 100%;
+  position: relative;
+  float: left;
+  display: none;
+  background-color: #2F4F4F; }
+
+#aboutRight {
+  /* Light Honeycomb Variation
+    * Original from  Toptal Subtle Patterns
+    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
+    * by Federica Pelzel*/
+  background-image: url("../assets/honey_grey.png");
+  width: 80%;
+  height: 100%;
+  position: relative;
+  float: right;
+  display: none;
+  background-color: #424242;
+  color: white; }
+
+#aboutBody {
+  width: 50%;
+  height: 75%;
+  top: 50%;
+  left: 14%;
+  transform: translate(0, -50%);
+  position: absolute;
+  font-size: 1.1em; }
+
+#aboutBody p {
+  height: 100%;
+  word-break: break-all;
+  overflow-y: auto;
+  margin: 0;
+  padding: 10px 20px 40px 20px; }
+
+#hobbies .chip {
+  background-color: #424242;
+  color: white; }
+
+@media (min-width: 300px) and (max-width: 1024px) {
+  #aboutTop {
+    display: block;
+    height: 7%; }
+  #aboutLeft {
+    width: 100%;
+    height: 23%; }
+  #aboutRight {
+    width: 100%;
+    height: 70%; }
+  #aboutCenter {
+    top: 50%;
+    left: 50%; }
+  #aboutCenter img {
+    width: 35vw;
+    height: 35vw; }
+  #aboutBody {
+    width: 80%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
+    font-size: 1.2em; }
+  #hobbies {
+    display: none; } }
+
+@media (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
+  #aboutCenter {
+    top: 35%;
+    left: 50%; }
+  #aboutTopLeft {
+    width: 30%;
+    height: 100%;
+    float: left; }
+  #aboutTopRight {
+    width: 70%;
+    height: 100%;
+    float: right;
+    background-color: #424242; }
+  #aboutLeft {
+    width: 30%;
+    height: 93%; }
+  #aboutRight {
+    width: 70%;
+    height: 93%; }
+  #aboutBody {
+    width: 80%;
+    height: 75%;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    position: absolute;
-    margin: 0;
-    color: white;
-}
-
-#aboutCenter img{
-    width: 15vw;
-    height: 15vw;
-    border-radius: 50%;
-}
-
-#aboutLeft {
-    display: none;
-    position: relative;
-    float: left;
-    width: 20%;
-    height: 100%;
-    background-color: #2F4F4F;
-    /* Light Honeycomb Variation
-    * Original from  Toptal Subtle Patterns
-    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
-    * by Federica Pelzel*/
-    background-image: url("../assets/honey_green.png");
-}
-
-#aboutRight {
-    display: none;
-    position: relative;
-    float: right;
-    width: 80%;
-    height: 100%;
-    background-color: #424242;
-    color: white;
-    /* Light Honeycomb Variation
-    * Original from  Toptal Subtle Patterns
-    * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
-    * by Federica Pelzel*/
-    background-image: url("../assets/honey_grey.png");
-}
-
-#aboutBody {
-    position: absolute;
-    width: 50%;
-    height: 75%;
-    top: 50%;
-    left: 14%;
-    transform: translateY(-50%);
-    font-size: 1.1em;
-}
-
-#aboutBody p {
-    height: 100%;
-    word-break: break-all;
-    overflow-y: auto;
-    margin: 0;
-    padding: 10px 20px 40px 20px
-}
-
-#hobbies .chip {
-    background-color: #424242;
-    color: white;
-}
-
-@media (min-width: 300px) and (max-width: 1024px) {
-    #aboutTop {
-        display: block;
-        height: 7%;    }
-
-    #aboutLeft {
-        width: 100%;
-        height: 23%;
-    }
-
-    #aboutRight {
-        width: 100%;
-        height: 70%;
-    }
-
-    #aboutCenter {
-        top: 50%;
-        left: 50%;
-    }
-
-    #aboutCenter img{
-        width: 35vw;
-        height: 35vw;
-    }
-
-    #aboutBody {
-        position: absolute;
-        width: 80%;
-        height: 100%;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 1.2em;
-    }
-
-    #hobbies {
-        display: none;
-    }
-}
-
-@media (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
-    #aboutCenter {
-        top: 35%;
-        left: 50%;
-    }
-
-    #aboutTopLeft {
-        width: 30%;
-        height: 100%;
-        float: left;
-    }
-
-    #aboutTopRight {
-        width: 70%;
-        height: 100%;
-        float: right;
-        background-color: #424242;
-    }
-
-    #aboutLeft {
-        height: 93%;
-        width: 30%;
-    }
-
-    #aboutRight {
-        height: 93%;
-        width: 70%;
-    }
-
-    #aboutBody {
-        position: absolute;
-        width: 80%;
-        height: 75%;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    #hobbies {
-        display: none;
-    }
-}
-
+    position: absolute; }
+  #hobbies {
+    display: none; } }
 
 @media (min-width: 600px) and (max-width: 1024px) {
-    #aboutCenter img{
-        width: 27vw;
-        height: 27vw;
-    }
-
-    #aboutBody {
-        font-size: 1.2em;
-    }
-}
+  #aboutCenter img {
+    width: 27vw;
+    height: 27vw; }
+  #aboutBody {
+    font-size: 1.2em; } }
 
 @media (min-width: 300px) and (max-width: 600px) {
-    #aboutCenter img{
-        width: 32vw;
-        height: 32vw;
-    }
+  #aboutCenter img {
+    width: 32vw;
+    height: 32vw; }
+  #aboutBody {
+    font-size: 75%; } }
 
-    #aboutBody {
-        font-size: 75%;
-    }
-}
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
-    #aboutTop {
-        display: none;
-    }
-
-    #aboutLeft {
-        width: 30%;
-        height: 100%;
-    }
-
-    #aboutRight {
-        width: 70%;
-        height: 100%;
-    }
-
-    #aboutCenter img{
-        width: 25vw;
-        height: 25vw;
-    }
-
-    #aboutBody {
-        position: absolute;
-        width: 60%;
-        height: 80%;
-        top: 50%;
-        left: 35%;
-        font-size: 65%;
-        transform: translate(-50%,-50%);
-
-    }
-
-    #hobbies {
-        display: none;
-    }
-}
+  #aboutTop, #hobbies {
+    display: none; }
+  #aboutLeft {
+    width: 30%;
+    height: 100%; }
+  #aboutRight {
+    width: 70%;
+    height: 100%; }
+  #aboutCenter img {
+    width: 25vw;
+    height: 25vw; }
+  #aboutBody {
+    width: 60%;
+    height: 80%;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 65%; } }
 
 @media (min-width: 0px) and (max-width: 300px) {
-    #aboutTop {
-        display: none !important;
-    }
-
-    #aboutLeft {
-        display: none !important;
-    }
-
-    #aboutRight {
-        display: none !important;
-    }
-}
+  #aboutTop, #aboutLeft, #aboutRight {
+    display: none !important; } }
