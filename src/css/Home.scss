@@ -1,10 +1,11 @@
+@import "Shared.scss";
+
 #home {
-    height: 100vh;
     /* Spiration Dark from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/spiration-dark/
      * by Monika*/
     background-image: url("../assets/spiration.png");
-    position: relative;
+    @include setMain(transparent);
     animation: moveDown 5s linear infinite;
 }
 
@@ -13,37 +14,33 @@
     to {background-position: bottom;}
 }
 
-#homeCenter{
-    color: white;
+#homeCenter {
+    color: $colorWhite;
     padding: 0;
-    position: absolute;
-    top: 40%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    font-family: 'Roboto', sans-serif;
+    @include transformXY(40%, 48%, -50%, -50%);
+    font-family: $roboFont;
 }
 
-#homeTitle{
+#homeTitle {
     float: left;
 }
 
 .anim {
-    width: 100%;
-    height: 100%;
+    @include setDim(100%, 100%);
     z-index: -1;
 }
 
-.typed-cursor{
-    color: white;
+.typed-cursor {
+    color: $colorWhite;
     opacity: 1;
     animation: typedjsBlink 0.7s infinite;
     -webkit-animation: typedjsBlink 0.7s infinite;
 }
 
-@keyframes typedjsBlink{
+@keyframes typedjsBlink {
     50% { opacity: 0.0; }
 }
-@-webkit-keyframes typedjsBlink{
+@-webkit-keyframes typedjsBlink {
     0% { opacity: 1; }
     50% { opacity: 0.0; }
     100% { opacity: 1; }
@@ -53,7 +50,7 @@
     font-size: 450%;
 }
 
-.typed-fade-out{
+.typed-fade-out {
     opacity: 0;
     transition: opacity .25s;
     -webkit-animation: 0;
@@ -61,7 +58,7 @@
 }
 
 .anim {
-    color: white;
+    color: $colorWhite;
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
@@ -84,21 +81,13 @@
         white-space: pre;
     }
 
-    #homeCenter span.typed-cursor {
-        display: none;
-    }
-
-    .anim {
+    #homeCenter span.typed-cursor, .anim {
         display: none;
     }
 }
 
 @media (min-width: 0px) and (max-width: 300px) {
-    .anim {
-        display: none;
-    }
-
-    #homeCenter {
+    .anim, #homeCenter {
         display: none;
     }
 }
