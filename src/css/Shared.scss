@@ -1,11 +1,13 @@
-
 $aboutBackgroundLeft: #2F4F4F;
 $aboutBackgroundRight: #424242;
 $aboutFont: 'Roboto', sans-serif;
 
+$colorWhite: white;
+$colorBlack: black;
+
+$contactColor: #FFB2B2;
 $contactFont: 'Fira Mono', monospace;
 
-$colorWhite: white;
 
 @mixin aboutComponents($width, $height, $float, $backColor) {
   width: $width;

@@ -25,19 +25,16 @@
 }
 
 #contactContent {
-    top: 50%;
-    transform: translate(-50%,-50%)
+    @include transformXY(50%, 0, -50%, -50%);
 }
 
 #contactHeader {
     text-align: center;
-    top: 15%;
-    transform: translate(-50%,-50%)
+    @include transformXY(15%, 0, -50%, -50%);
 }
 
 #contactIntro {
-    top: 25%;
-    transform: translate(-50%,-50%)
+    @include transformXY(25%, 0, -50%, -50%);
 }
 
 #input_3 {
@@ -57,7 +54,7 @@
 }
 
 #input_3::-webkit-scrollbar-thumb {
-    background: #FFB2B2;
+    background: $contactColor;
     border-radius: 5px;
 }
 
@@ -76,41 +73,33 @@
 #contactSubmit {
     border-radius: 10px;
     color: #ECECEC;
-    background-color: #FFB2B2;
+    background-color: $contactColor;
 }
 
-.input-field label.active, input[type=text]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{
-    color: #FFB2B2 !important;
+.input-field label.active, input[type=text]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+    color: $contactColor !important;
 }
 
 input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #FFB2B2;
-    box-shadow: 0 1px #FFB2B2;
+    border-bottom: 1px solid $contactColor;
+    box-shadow: 0 1px $contactColor;
 }
 
 .fail {
     display: none;
-    color: #FFB2B2;
+    color: $contactColor;
 }
 
 .progress {
     background-color: transparent;
 }
 
-.progress .indeterminate{
-    background-color: #FFB2B2;
+.progress .indeterminate {
+    background-color: $contactColor;
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    #contactShaker {
-        font-size: 1.75em;
-    }
-
-    .input-field, .input-field label {
-        font-size: 1.75rem;
-    }
-
-    #contactSubmit {
+@media (min-width: 768px) and (max-width: 1024px) {
+    #contactSubmit, #contactShaker, .input-field, .input-field label {
         font-size: 1.75rem !important;
     }
 }
@@ -126,19 +115,15 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
         display: none;
     }
 
-    .input-field, .input-field label {
-        font-size: 1rem;
-    }
-
-    #contactSubmit {
+    #contactSubmit, .input-field, .input-field label, .fail {
         font-size: 1rem !important;
     }
 
     .fail {
         display: none;
-        color: #FFB2B2;
-        font-size: 1rem !important;
+        color: $contactColor;
     }
+
     textarea.materialize-textarea, input[type=text] {
         height: 2.5rem !important;
         min-height: 2.5rem !important;
@@ -146,15 +131,7 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
 }
 
 @media (min-width: 0px) and (max-width: 300px) {
-    #contactHeader {
-        display: none;
-    }
-
-    #contactIntro {
-        display: none;
-    }
-
-    #contactContent {
+    #contactContent, #contactIntro, #contactHeader {
         display: none;
     }
 }
