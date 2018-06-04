@@ -7,7 +7,11 @@ $colorBlack: black;
 $contactColor: #FFB2B2;
 $contactFont: 'Fira Mono', monospace;
 
+$projectRed: #C12101 ;
+$projectYellow: #FFAB40;
+
 $roboFont: 'Roboto', sans-serif;
+$ubuntuFont: 'Ubuntu Mono', monospace;
 
 @mixin aboutComponents($width, $height, $float, $backColor) {
   width: $width;
@@ -25,11 +29,15 @@ $roboFont: 'Roboto', sans-serif;
   background-color: $backColor;
 }
 
-@mixin transformXY($top, $left, $x, $y) {
+@mixin transformXY($top, $left, $x, $y, $pos: "") {
   top: $top;
   left: $left;
   transform: translate($x, $y);
-  position: absolute;
+  @if $pos == "" {
+    position: absolute;
+  } @else {
+    position: relative;
+  }
 }
 
 @mixin nav($width, $height) {
@@ -41,7 +49,18 @@ $roboFont: 'Roboto', sans-serif;
   display: inline-block;
 }
 
+@mixin resume($left, $bottom) {
+  left: $left;
+  bottom: $bottom;
+  position: absolute;
+}
+
 @mixin setDim($width, $height) {
   width: $width;
   height: $height;
+}
+
+@mixin setPictureDim($width, $height) {
+  width: $width !important;
+  height: $height !important;
 }

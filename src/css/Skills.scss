@@ -1,11 +1,13 @@
+@import "Shared.scss";
+
 #skills {
-    font-family: 'Ubuntu Mono', monospace;
-    height: 100vh;
     /* Sayagata Variation
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/japanese-sayagata/
      * by Olga Libby*/
     background-image: url("../assets/sayagata-red.png");
+    font-family: $ubuntuFont;
+    @include setMain(transparent);
     animation: moveReverseDiag 10s linear infinite;
 }
 
@@ -28,23 +30,21 @@
 #left {
     width: 20%;
     height: 100%;
+    @include setDim(20%, 100%);
     float: left;
 }
 
 #right {
-    width: 80%;
-    height: 100%;
+    @include setDim(80%, 100%);
     float: right;
 }
 
 .carousel {
-    width: 200%;
-    height: 35%;
+    @include setDim(200%, 35%);
 }
 
 .carousel .carousel-item {
-    width: 120px !important;
-    height: 120px !important;
+    @include setPictureDim(120px, 120px);
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -54,46 +54,34 @@
 }
 
 #typedBox {
-    width: 60%;
-    height: 80%;
+    @include setDim(60%, 80%);
     background-color: black;
     transform: translateX(10%) translateY(7.5%);
     border-radius: 10px;
 }
 
 #typedHeader {
-    width: 100%;
-    height: 10%;
+    @include setDim(100%, 10%);
     background-color: #6a6a6a;
     border-radius: 10px 10px 0 0;
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: $ubuntuFont;
     text-align: center;
     position: relative;
 }
 
 #typedHeader p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-100%);
+    @include transformXY(50%, 50%, -50%, -100%);
     font-size: 1.5em;
     font-family: 'Ubuntu Mono', monospace;
 }
 
 #typedBody {
+    @include setDim(100%, 90%);
     font-size: 1.2rem;
-    width: 100%;
-    height: 90%;
     border-radius: 10px 10px 0 0;
-    color: white;
-    font-family: 'Ubuntu Mono', monospace;
+    color: $colorWhite;
+    font-family: $ubuntuFont;
     padding: 10px 10px 0 10px;
-}
-
-#resume {
-    position: absolute;
-    bottom: 0;
-    color: white;
 }
 
 .typed-cursor{
@@ -107,10 +95,8 @@
 }
 
 #resume {
-    position: absolute;
-    left: 25%;
-    transform: translateX(0%);
-    bottom: 3%;
+    @include resume(25%, 3%);
+    color: $colorWhite;
 }
 
 #resume a {color: #2DA1A1;}
@@ -148,13 +134,11 @@
     }
 
     #left {
-        width: 100%;
-        height: 20%;
+        @include setDim(100%, 20%);
     }
 
     #right {
-        width: 100%;
-        height: 80%;
+        @include setDim(100%, 80%);
         position: relative;
     }
 
@@ -167,37 +151,26 @@
         height: 93%;
     }
     .carousel {
-        width: 100%;
-        height: 100%;
+        @include setDim(100%, 100%);
         transform: translateX(0);
     }
 
-    .carousel .carousel-item {
-        width: 110px !important;
-        height: 110px !important;
+    .carousel .carousel-item, .carousel .carousel-item img {
+        @include setPictureDim(110px, 110px);
     }
 
     .carousel .carousel-item img {
         transform: rotateZ(0deg);
-        width: 110px !important;
-        height: 110px !important;
     }
 
     #typedBox {
-        width: 80%;
-        height: 75%;
-        position: absolute;
-        left: 50%;
-        top: 5%;
-        transform: translateX(-50%);
+        @include setDim(80%, 75%);
+        @include transformXY(5%, 50%, -50%, 0);
     }
 
     #resume {
-        position: absolute;
-        left: 10%;
-        bottom: 6%;
+        @include resume(10%, 6%);
     }
-
 }
 
 @media (min-width: 300px) and (max-width: 767px) {
@@ -209,26 +182,18 @@
         height: 80%;
     }
 
-    .carousel .carousel-item {
-        width: 90px !important;
-        height: 90px !important;
+    .carousel .carousel-item, .carousel .carousel-item img {
+        @include setPictureDim(90px, 90px);
     }
 
-    .carousel .carousel-item img {
-        width: 90px !important;
-        height: 90px !important;
-    }
     #typedBox {
-        width: 95%;
-        height: 75%;
+        @include setDim(95%, 75%);
         top: 5%;
         position: absolute;
     }
 
     #resume {
-        position: absolute;
-        left: 5%;
-        bottom: 6%;
+        @include resume(5%, 6%);
     }
 }
 
@@ -242,30 +207,24 @@
     }
 
     #left {
-        width: 20%;
-        height: 100%;
+        @include setDim(20%, 100%);
         float: left;
     }
 
     #right {
-        width: 80%;
-        height: 100%;
+        @include setDim(80%, 100%);
     }
 
     .carousel {
-        width: 200%;
-        height: 35%;
+        @include setDim(200%, 35%);
         transform: translateX(20%) translateY(-40%) rotateZ(90deg);
     }
 
-    .carousel .carousel-item {
-        width: 75px !important;
-        height: 75px !important;
+    .carousel .carousel-item, .carousel .carousel-item img {
+        @include setPictureDim(75px, 75px);
     }
 
     .carousel .carousel-item img {
-        width: 75px !important;
-        height: 75px !important;
         transform: rotateZ(-90deg);
     }
 
@@ -274,12 +233,8 @@
     }
 
     #typedBox {
-        left:0;
-        width: 70%;
-        height: 75%;
-        top: 5%;
-        position: absolute;
-        transform: translateX(0);
+        @include setDim(70%, 75%);
+        @include transformXY(5%, 0, 0, 0);
     }
 
     #resume {
@@ -289,11 +244,7 @@
 }
 
 @media (min-width: 0px) and (max-width: 300px) {
-    #skillsTop {
-        display: none;
-    }
-
-    #skillsBot {
+    #skillsBot, #skillsTop {
         display: none;
     }
 }

@@ -1,8 +1,9 @@
 @import "../../node_modules/slick-carousel/slick/slick.css";
 @import "../../node_modules/slick-carousel/slick/slick-theme.css";
+@import "Shared.scss";
 
 #projects {
-    font-family: 'Roboto', serif;
+    font-family: $roboFont;
     height: 100vh;
 }
 
@@ -15,12 +16,8 @@
 }
 
 #projectsTopSlider {
-    position: relative;
-    width: 100%;
-    height: 30%;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    @include setDim(100%, 30%);
+    @include transformXY(15%, 50%, -50%, -50%, relative);
     text-align: center;
 }
 
@@ -33,23 +30,18 @@
     padding: 0 !important;
     margin: 0 0.5rem !important;
     border-radius: 50% !important;
-
 }
 
 #projectsTopSlider h2{
     margin: 0;
 }
 
-#projectsTopSlider h2  {
-    color:#ffab40 !important;
+#projectsGithub, #projectsTopSlider h2  {
+    color:$projectYellow !important;
 }
 
 .card {
-    color:#c12101 !important;
-}
-
-#projectsGithub {
-    color:#ffab40 !important;
+    color: $projectRed !important;
 }
 
 @keyframes moveRight {
@@ -63,23 +55,23 @@
 }
 
 #projectsBackTop {
-    height: 60vh;
-    position: relative;
     /* Seigaiha Variation
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-blue.png");
+    height: 60vh;
+    position: relative;
     /*animation: moveRight 10s linear infinite;*/
 }
 
 #projectsBackBot {
-    height: 40vh;
     /* Seigaiha Variation
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
     background-image: url("../assets/seigaiha-strong-white.png");
+    height: 40vh;
     /*animation: moveLeft 10s linear infinite;*/
 }
 
@@ -96,10 +88,7 @@
 }
 
 #projectHolder {
-    top: 65%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
+    @include transformXY(65%, 50%, -50%, -50%);
 }
 
 #projectsStart {
@@ -117,8 +106,7 @@
     }
 
     #projectHolder {
-        top: 35%;
-        left: 17%;
+        @include transformXY(35%, 17% , 0, 0);
     }
 }
 
@@ -135,6 +123,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #projectsTopSlider {
+        top: 30%;
         left: 50%;
     }
 }
@@ -147,7 +136,6 @@
     #projectsGithub {
         font-size: 1.20rem;
     }
-
 }
 
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
@@ -156,15 +144,11 @@
     }
 
     #projectHolder {
-        top: 50%;
-        left: 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
+        @include transformXY(50%, 50% , -50, -50);
     }
 
     .slick-list {
-        width: 265px;
-        height: 265px;
+        @include setDim(265px, 265px);
         left: 50%;
         transform: translateX(-50%) !important;
     }
@@ -175,15 +159,7 @@
 }
 
 @media (min-width: 0px) and (max-width: 300px) {
-    #projectsHeader {
-        display: none;
-    }
-
-    #projectsTopSlider {
-        display: none;
-    }
-
-    #projectHolder {
+    #projectsHeader, #projectHolder, #projectsTopSlider {
         display: none;
     }
 }
