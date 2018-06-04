@@ -1,11 +1,14 @@
 #skills {
-  font-family: 'Ubuntu Mono', monospace;
-  height: 100vh;
   /* Sayagata Variation
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/japanese-sayagata/
      * by Olga Libby*/
   background-image: url("../assets/sayagata-red.png");
+  font-family: "Ubuntu Mono", monospace;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: transparent;
   animation: moveReverseDiag 10s linear infinite; }
 
 @keyframes moveReverseDiag {
@@ -24,6 +27,8 @@
   position: relative; }
 
 #left {
+  width: 20%;
+  height: 100%;
   width: 20%;
   height: 100%;
   float: left; }
@@ -58,31 +63,26 @@
   height: 10%;
   background-color: #6a6a6a;
   border-radius: 10px 10px 0 0;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: "Ubuntu Mono", monospace;
   text-align: center;
   position: relative; }
 
 #typedHeader p {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
+  position: absolute;
   font-size: 1.5em;
   font-family: 'Ubuntu Mono', monospace; }
 
 #typedBody {
-  font-size: 1.2rem;
   width: 100%;
   height: 90%;
+  font-size: 1.2rem;
   border-radius: 10px 10px 0 0;
   color: white;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: "Ubuntu Mono", monospace;
   padding: 10px 10px 0 10px; }
-
-#resume {
-  position: absolute;
-  bottom: 0;
-  color: white; }
 
 .typed-cursor {
   opacity: 1;
@@ -93,10 +93,10 @@
   white-space: pre; }
 
 #resume {
-  position: absolute;
   left: 25%;
-  transform: translateX(0%);
-  bottom: 3%; }
+  bottom: 3%;
+  position: absolute;
+  color: white; }
 
 #resume a {
   color: #2DA1A1; }
@@ -140,34 +140,29 @@
     width: 100%;
     height: 100%;
     transform: translateX(0); }
-  .carousel .carousel-item {
+  .carousel .carousel-item, .carousel .carousel-item img {
     width: 110px !important;
     height: 110px !important; }
   .carousel .carousel-item img {
-    transform: rotateZ(0deg);
-    width: 110px !important;
-    height: 110px !important; }
+    transform: rotateZ(0deg); }
   #typedBox {
     width: 80%;
     height: 75%;
-    position: absolute;
-    left: 50%;
     top: 5%;
-    transform: translateX(-50%); }
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute; }
   #resume {
-    position: absolute;
     left: 10%;
-    bottom: 6%; } }
+    bottom: 6%;
+    position: absolute; } }
 
 @media (min-width: 300px) and (max-width: 767px) {
   #left {
     height: 20%; }
   #right {
     height: 80%; }
-  .carousel .carousel-item {
-    width: 90px !important;
-    height: 90px !important; }
-  .carousel .carousel-item img {
+  .carousel .carousel-item, .carousel .carousel-item img {
     width: 90px !important;
     height: 90px !important; }
   #typedBox {
@@ -176,9 +171,9 @@
     top: 5%;
     position: absolute; }
   #resume {
-    position: absolute;
     left: 5%;
-    bottom: 6%; } }
+    bottom: 6%;
+    position: absolute; } }
 
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
   #skillsTop {
@@ -196,28 +191,24 @@
     width: 200%;
     height: 35%;
     transform: translateX(20%) translateY(-40%) rotateZ(90deg); }
-  .carousel .carousel-item {
+  .carousel .carousel-item, .carousel .carousel-item img {
     width: 75px !important;
     height: 75px !important; }
   .carousel .carousel-item img {
-    width: 75px !important;
-    height: 75px !important;
     transform: rotateZ(-90deg); }
   #typedHeader p {
     font-size: 1.3rem; }
   #typedBox {
-    left: 0;
     width: 70%;
     height: 75%;
     top: 5%;
-    position: absolute;
-    transform: translateX(0); }
+    left: 0;
+    transform: translate(0, 0);
+    position: absolute; }
   #resume {
     position: absolute;
     left: 0; } }
 
 @media (min-width: 0px) and (max-width: 300px) {
-  #skillsTop {
-    display: none; }
-  #skillsBot {
+  #skillsBot, #skillsTop {
     display: none; } }

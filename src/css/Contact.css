@@ -25,16 +25,22 @@
 
 #contactContent {
   top: 50%;
-  transform: translate(-50%, -50%); }
+  left: 0;
+  transform: translate(-50%, -50%);
+  position: absolute; }
 
 #contactHeader {
   text-align: center;
   top: 15%;
-  transform: translate(-50%, -50%); }
+  left: 0;
+  transform: translate(-50%, -50%);
+  position: absolute; }
 
 #contactIntro {
   top: 25%;
-  transform: translate(-50%, -50%); }
+  left: 0;
+  transform: translate(-50%, -50%);
+  position: absolute; }
 
 #input_3 {
   position: relative;
@@ -85,11 +91,7 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
   background-color: #FFB2B2; }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  #contactShaker {
-    font-size: 1.75em; }
-  .input-field, .input-field label {
-    font-size: 1.75rem; }
-  #contactSubmit {
+  #contactSubmit, #contactShaker, .input-field, .input-field label {
     font-size: 1.75rem !important; } }
 
 @media (min-width: 300px) and (max-width: 768px) {
@@ -99,22 +101,15 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
 @media (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
   #contactIntro, #contactHeader {
     display: none; }
-  .input-field, .input-field label {
-    font-size: 1rem; }
-  #contactSubmit {
+  #contactSubmit, .input-field, .input-field label, .fail {
     font-size: 1rem !important; }
   .fail {
     display: none;
-    color: #FFB2B2;
-    font-size: 1rem !important; }
+    color: #FFB2B2; }
   textarea.materialize-textarea, input[type=text] {
     height: 2.5rem !important;
     min-height: 2.5rem !important; } }
 
 @media (min-width: 0px) and (max-width: 300px) {
-  #contactHeader {
-    display: none; }
-  #contactIntro {
-    display: none; }
-  #contactContent {
+  #contactContent, #contactIntro, #contactHeader {
     display: none; } }
