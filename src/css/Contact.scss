@@ -98,15 +98,32 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
     background-color: $contactColor;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
     #contactSubmit, #contactShaker, .input-field, .input-field label {
         font-size: 1.75rem !important;
+    }
+
+    footer {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
 @media (min-width: 300px) and (max-width: 768px) {
     #contactIntro {
         display: none;
+    }
+
+    footer {
+        font-size: 75%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -127,6 +144,10 @@ input[type="text"]:focus:not([readonly]), textarea.materialize-textarea:focus:no
     textarea.materialize-textarea, input[type=text] {
         height: 2.5rem !important;
         min-height: 2.5rem !important;
+    }
+
+    footer {
+        font-size: 50%;
     }
 }
 

@@ -17,7 +17,7 @@ class Projects extends Component {
         this.info = [
             "Tired of scrolling through Netflix? Find movies that you'll like.",
             "Discover new movies, learn about the old ones too.",
-            "Deep learning"
+            "Find out what kind of dog you have thousands of pictures of."
         ];
 
         this.links = [

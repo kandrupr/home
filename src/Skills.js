@@ -8,6 +8,7 @@ import java from './assets/java-icon.png';
 import php from './assets/php-icon.png';
 import python from './assets/python-icon.png';
 import reacticon from './assets/react-icon.png';
+import resume from './assets/Resume.pdf';
 import Typer from './Typer.js'
 
 class Skills extends Component {
@@ -49,7 +50,7 @@ class Skills extends Component {
                             </div>
                             <Typer ref="terminal" />
                         </div>
-                        <p id="resume">For a comprehensive list, check out my <a href="">resume.</a></p>
+                        <p id="resume">For a comprehensive list, check out my <a href={resume}>resume.</a></p>
                     </div>
                 </div>
             </div>

@@ -33,7 +33,7 @@ class Layout extends Component {
 
     componentDidMount() {
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
-        window.history.replaceState(null, '', '/');
+        //window.history.replaceState(null, '', '/');
         this.changeNavColor("home");
 
         var that = this;

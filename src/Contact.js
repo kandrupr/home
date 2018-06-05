@@ -193,6 +193,9 @@ class Contact extends Component {
                         </div>
                     </form>
                 </Col>
+                <footer>
+                    <p>Designed and developed by Pranay Kandru<br></br>Skills Icons from <a href="https://icons8.com/">Icons8</a></p>
+                </footer>
             </Col>
         );
     }
