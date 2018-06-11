@@ -18,7 +18,7 @@
     color: $colorWhite;
     padding: 0;
     @include transformXY(40%, 48%, -50%, -50%);
-    font-family: $roboFont;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #homeTitle {

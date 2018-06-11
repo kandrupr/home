@@ -5,6 +5,7 @@ import $ from 'jquery';
 import cplus from './assets/c++-icon.png';
 import csharp from './assets/c-sharp-icon.png';
 import java from './assets/java-icon.png';
+import javascript from './assets/javascript-icon.png';
 import php from './assets/php-icon.png';
 import python from './assets/python-icon.png';
 import reacticon from './assets/react-icon.png';
@@ -38,6 +39,7 @@ class Skills extends Component {
                             cplus,
                             csharp,
                             java,
+                            javascript,
                             php,
                             python,
                             reacticon

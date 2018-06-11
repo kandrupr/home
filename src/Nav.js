@@ -5,7 +5,7 @@ import $ from "jquery";
 
 const navColors  = {
     "home" : "#FFFFFF",
-    "about" : "#FFFFFF",
+    "about" : "#556B2F",
     "skills" : "#2DA1A1",
     "projects" : "#FFAB40",
     "contact" : "#121212"

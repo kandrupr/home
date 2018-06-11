@@ -33,57 +33,62 @@ class Layout extends Component {
 
     componentDidMount() {
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
-        //window.history.replaceState(null, '', '/');
+        window.history.replaceState(null, '', "/");
         this.changeNavColor("home");
-
+        this.scrollSpy();
         var that = this;
         $(window).scroll(function() {
-            if(that.inView("#homeFinder")){
-                if(that.state.current !== "home") {
-                    that.changeNavColor("home");
-                }
-            } else if(that.inView("#aboutFinder")) {
-                if(that.state.current !== "about") {
-                    if(firstAbout) {
-                        if(window.innerWidth > 300) {
-                            firstAbout = false;
-                            $("#aboutLeft").fadeIn(2000);
-                            $("#aboutRight").fadeIn(2000);
-                        }
-                    }
-                    that.changeNavColor("about");
-                }
-            } else if(that.inView("#projectsFinder")) {
-                if(that.state.current !== "projects") {
-                    that.changeNavColor("projects");
-                }
-            } else if(that.inView("#skillsFinder")) {
-                if(that.state.current !== "skills") {
-                    if (firstSkill) {
-                        firstSkill = false;
-                        that.refs.skills.startTyping();
-                    }
-                    that.changeNavColor("skills");
-                }
-                if(firstProjects){
-                    if (that.inView("#projectsStart")) {
-                        if(window.innerWidth > 1024) {
-                            firstProjects = false;
-                            $("#projectsTopSlider").addClass('animated bounceInRight');
-                            $("#projectHolder").addClass('animated bounceInLeft');
-                        }
+            that.scrollSpy();
+        });
+    }
+
+    scrollSpy() {
+        if(this.inView("#homeFinder")){
+            if(this.state.current !== "home") {
+                this.changeNavColor("home");
+            }
+        } else if(this.inView("#aboutFinder")) {
+            if(this.state.current !== "about") {
+                if(firstAbout) {
+                    if(window.innerWidth > 300) {
+                        firstAbout = false;
+                        $("#aboutLeft").fadeIn(2000);
+                        $("#aboutRight").fadeIn(2000);
                     }
                 }
-            } else if(that.inView("#contactFinder")) {
-                if(that.state.current !== "contact") {
-                    if (firstContact) {
-                        firstContact = false;
-                        // something cool?
+                this.changeNavColor("about");
+            }
+        } else if(this.inView("#projectsStart") || this.inView("#projectsFinder")) {
+            if (firstProjects) {
+                if (window.innerWidth > 1024) {
+                    firstProjects = false;
+                    $("#projectsTopSlider").addClass('animated bounceInRight');
+                    $("#projectHolder").addClass('animated bounceInLeft');
+                }
+            } else {
+                if(this.inView("#projectsFinder")) {
+                    if(this.state.current !== "projects") {
+                        this.changeNavColor("projects");
                     }
-                    that.changeNavColor("contact");
                 }
             }
-        });
+        } else if(this.inView("#skillsFinder")) {
+            if(this.state.current !== "skills") {
+                if (firstSkill) {
+                    firstSkill = false;
+                    this.refs.skills.startTyping();
+                }
+                this.changeNavColor("skills");
+            }
+        } else if(this.inView("#contactFinder")) {
+            if(this.state.current !== "contact") {
+                if (firstContact) {
+                    firstContact = false;
+                    // add animation?
+                }
+                this.changeNavColor("contact");
+            }
+        }
     }
 
     changeNavColor(a, font) {

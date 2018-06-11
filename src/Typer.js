@@ -12,12 +12,13 @@ class Typer extends Component {
         super();
         this.value = 0;
         this.languages = [
-            "^400C++^1000\n installing components...^100\n Fetching from source...",
-            "^400C#^1000\n installing components...^100\n Fetching from source...",
-            "^400Java^1000\n installing components...^100\n Fetching from source...",
-            "^400PHP^1000\n installing components...^100\n Fetching from source...",
-            "^400Python^1000\n installing components...^100\n Fetching from source...",
-            "^400React^1000\n installing components...^100\n Fetching from source..."
+            "^400C++^1000\n Have experience in Object Oriented Programming...^100\n Expertise:^1000 Intermediate...",
+            "^400C#^1000\n Developed a website in ASP.NET Core and a few console applications...^100\n Expertise:^1000 Novice...",
+            "^400Java^1000\n Created multiple Android applications using Java...^100\n Expertise:^1000 Proficient...",
+            "^400JavaScript^1000\n Developed JavaScript driven websites that give a better user experience...^100\n Expertise:^1000 Proficient...",
+            "^400PHP^1000\n Experience scripting and building websites with PHP...^100\n Expertise:^1000 Proficient...",
+            "^400Python^1000\n First choice when it comes to scripting and data analysis...^100\n Expertise:^1000 Proficient...",
+            "^400React^1000\n Used React as a front end library for multiple websites...^100\n Expertise:^1000 Proficient..."
         ];
     }
 

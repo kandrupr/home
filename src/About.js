@@ -28,9 +28,7 @@ class About extends Component {
                 </div>
                 <div id="aboutRight">
                     <div id="aboutBody">
-                        <p>
-
-                        </p>
+                        <p>o k</p>
                     </div>
                 </div>
             </div>
