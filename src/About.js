@@ -19,12 +19,11 @@ class About extends Component {
                             <p>Interests &amp; Hobbies: </p>
                             <Chip>Film</Chip>
                             <Chip>Basketball</Chip>
+                            <Chip>Traveling</Chip>
                             <Chip>Running</Chip>
-                            <Chip>4</Chip>
-                            <Chip>5</Chip>
+                            <Chip>Cooking</Chip>
                         </div>
                     </div>
-
                 </div>
                 <div id="aboutRight">
                     <div id="aboutBody">
