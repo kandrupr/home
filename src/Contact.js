@@ -155,7 +155,7 @@ class Contact extends Component {
 
     render() {
         return (
-            <Col s={12} id="contact">
+            <Col s={12} id="contact" className="scrollify" data-name="contact">
                 <Col id="contactHeader" className="contactCenter" s={6}>
                     <Col s={11}>
                         <h2>Contact</h2>

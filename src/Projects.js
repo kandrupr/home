@@ -104,7 +104,7 @@ class Projects extends Component {
     }
     render() {
         return (
-            <Col id="projects" s={12}>
+            <Col id="projects" s={12} className="scrollify" data-name="projects">
                 <div id="projectsStart"></div>
                 <div id="projectsFinder" className="finder"></div>
                 <Col id="projectsBackground" s={12}>

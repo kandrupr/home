@@ -42,7 +42,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div id="home">
+            <div id="home" className="scrollify" data-name="home">
                 <div id="homeFinder" className="finder"></div>
                 <div className="anim">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700">

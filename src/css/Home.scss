@@ -3,9 +3,11 @@
 #home {
     /* Spiration Dark from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/spiration-dark/
-     * by Monika*/
+     * by Monika
     background-image: url("../assets/spiration.png");
+    */
     @include setMain(transparent);
+    background-color: black;
     animation: moveDown 5s linear infinite;
 }
 

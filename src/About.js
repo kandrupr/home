@@ -6,7 +6,7 @@ import {Chip} from 'react-materialize';
 class About extends Component {
     render() {
         return (
-            <div id="about">
+            <div id="about" className="scrollify" data-name="about">
                 <div id="aboutFinder" className="finder"></div>
                 <div id="aboutTop">
                     <div id="aboutTopLeft"></div>

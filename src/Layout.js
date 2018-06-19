@@ -8,6 +8,7 @@ import Contact from './Contact.js'
 import Nav from './Nav.js'
 import $ from 'jquery';
 import {Row, Col} from 'react-materialize'
+import 'jquery-scrollify'
 
 var firstAbout = true;
 var firstSkill = true;
@@ -34,12 +35,18 @@ class Layout extends Component {
     componentDidMount() {
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
         window.history.replaceState(null, '', "/");
-        this.changeNavColor("home");
         this.scrollSpy();
         var that = this;
+
         $(window).scroll(function() {
             that.scrollSpy();
         });
+
+        $.scrollify({
+            section : ".scrollify",
+            sectionName : "name",
+        });
+
     }
 
     scrollSpy() {
@@ -58,20 +65,6 @@ class Layout extends Component {
                 }
                 this.changeNavColor("about");
             }
-        } else if(this.inView("#projectsStart") || this.inView("#projectsFinder")) {
-            if (firstProjects) {
-                if (window.innerWidth > 1024) {
-                    firstProjects = false;
-                    $("#projectsTopSlider").addClass('animated bounceInRight');
-                    $("#projectHolder").addClass('animated bounceInLeft');
-                }
-            } else {
-                if(this.inView("#projectsFinder")) {
-                    if(this.state.current !== "projects") {
-                        this.changeNavColor("projects");
-                    }
-                }
-            }
         } else if(this.inView("#skillsFinder")) {
             if(this.state.current !== "skills") {
                 if (firstSkill) {
@@ -79,6 +72,17 @@ class Layout extends Component {
                     this.refs.skills.startTyping();
                 }
                 this.changeNavColor("skills");
+            }
+        } else if(this.inView("#projectsFinder")) {
+            if(this.state.current !== "projects") {
+                if (firstProjects) {
+                    if (window.innerWidth > 1024) {
+                        firstProjects = false;
+                        $("#projectsTopSlider").addClass('animated bounceInRight');
+                        $("#projectHolder").addClass('animated bounceInLeft');
+                    }
+                }
+                this.changeNavColor("projects");
             }
         } else if(this.inView("#contactFinder")) {
             if(this.state.current !== "contact") {
