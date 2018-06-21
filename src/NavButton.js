@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/Nav.css';
 import $ from "jquery";
+import 'jquery-scrollify'
 
 class NavButton extends Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class NavButton extends Component {
     }
 
     scrollTo() {
-        document.getElementById(this.title).scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
+        $.scrollify.move("#"+this.title);
     }
 
     activeNav() {

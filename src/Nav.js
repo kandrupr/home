@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import NavButton from './NavButton'
 import './css/Nav.css';
 import $ from "jquery";
+import home from './assets/pk_home.png'
+import about from './assets/pk_about.png'
+import skills from './assets/pk_skills.png'
+import projects from './assets/pk_projects.png'
+import contact from './assets/pk_contact.png'
+
 
 const navColors  = {
     "home" : "#FFFFFF",
@@ -11,8 +17,22 @@ const navColors  = {
     "contact" : "#121212"
 };
 
+const navLogo  = {
+    "home" : home,
+    "about" : about,
+    "skills" : skills,
+    "projects" : projects,
+    "contact" : contact
+};
+
 var maps;
 class Nav extends Component {
+    constructor() {
+        super();
+        this.state = {
+            logo: navLogo["home"],
+        };
+    }
     componentDidMount() {
         maps = {
             "home" : this.refs.navHome,
@@ -31,7 +51,10 @@ class Nav extends Component {
         });
         maps[a].inactiveNav();
         maps[b].activeNav();
+        this.setState({logo: navLogo[b]});
     }
+
+
 
     render() {
         return (
@@ -43,6 +66,7 @@ class Nav extends Component {
                     <NavButton ref="navProjects" name="projects"/>
                     <NavButton ref="navContact" name="contact"/>
                 </div>
+                <p><img src={this.state.logo} /></p>
             </div>
         );
     }
