@@ -3,6 +3,14 @@ import './css/Nav.css';
 import $ from "jquery";
 import 'jquery-scrollify'
 
+const navAnchor  = {
+    "home" : "homepage",
+    "about" : "aboutme",
+    "skills" : "myskills",
+    "projects" : "myprojects",
+    "contact" : "contactme"
+};
+
 class NavButton extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +18,7 @@ class NavButton extends Component {
     }
 
     scrollTo() {
-        $.scrollify.move("#"+this.title);
+        $.scrollify.move("#"+navAnchor[this.title]);
     }
 
     activeNav() {

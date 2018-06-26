@@ -55,8 +55,8 @@
 }
 
 #aboutBody {
-    @include setDim(50%, 75%);
-    @include transformXY(50%, 14%, 0, -50%);
+    @include setDim(65%, 75%);
+    @include transformXY(50%, 10%, 0, -50%);
     font-size: 1.1em;
 }
 
@@ -66,6 +66,14 @@
     overflow-y: auto;
     margin: 0;
     padding: 10px 20px 40px 20px;
+}
+
+#aboutBodyTop {
+    @include setDim(100%, 40%);
+}
+
+#aboutBodyBot {
+    @include setDim(100%, 60%);
 }
 
 #hobbies .chip {

@@ -5,7 +5,7 @@
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/japanese-sayagata/
      * by Olga Libby*/
-    background-image: url("../assets/sayagata-red.png");
+    background-image: url("../assets/sayagata-gray.png");
     font-family: $ubuntuFont;
     @include setMain(transparent);
     animation: moveReverseDiag 10s linear infinite;
@@ -81,7 +81,7 @@
     border-radius: 10px 10px 0 0;
     color: $colorWhite;
     font-family: $ubuntuFont;
-    padding: 10px 10px 0 10px;
+    padding: 20px 20px 0 20px;
 }
 
 .typed-cursor{
@@ -91,7 +91,7 @@
 }
 
 #typedSpan {
-    white-space: pre;
+    white-space: pre-line;
 }
 
 #resume {

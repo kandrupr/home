@@ -155,7 +155,7 @@ class Contact extends Component {
 
     render() {
         return (
-            <Col s={12} id="contact" className="scrollify" data-name="contact">
+            <Col s={12} id="contact" className="scrollify" data-name="contactme">
                 <Col id="contactHeader" className="contactCenter" s={6}>
                     <Col s={11}>
                         <h2>Contact</h2>
@@ -193,9 +193,9 @@ class Contact extends Component {
                         </div>
                     </form>
                 </Col>
-                <footer>
+                {/*<footer>
                     <p>Designed and developed by Pranay Kandru<br></br>Skills Icons from <a href="https://icons8.com/">Icons8</a></p>
-                </footer>
+                </footer>*/}
             </Col>
         );
     }

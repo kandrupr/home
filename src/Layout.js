@@ -20,8 +20,10 @@ class Layout extends Component {
         super();
         this.state = {
             current: "home",
+            custom: "Software Engineer"
         };
     }
+
     inView(elem) {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
@@ -33,6 +35,13 @@ class Layout extends Component {
     }
 
     componentDidMount() {
+        var link = window.location.href;
+        var custom = link.split("sp=");
+        //console.log(decodeURI(custom[1]));
+        if(custom.length === 2){
+            this.setState({custom: custom[1].replace('+', ' ')});
+        }
+
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
         window.history.replaceState(null, '', "/");
         this.scrollSpy();
@@ -49,6 +58,10 @@ class Layout extends Component {
 
     }
 
+    componentWillUnmount() {
+        $(window).unbind('beforeunload');
+    }
+
     scrollSpy() {
         if(this.inView("#homeFinder")){
             if(this.state.current !== "home") {
@@ -59,8 +72,10 @@ class Layout extends Component {
                 if(firstAbout) {
                     if(window.innerWidth > 300) {
                         firstAbout = false;
-                        $("#aboutLeft").fadeIn(2000);
-                        $("#aboutRight").fadeIn(2000);
+                        $("#aboutLeft").fadeIn(1000);
+                        $("#aboutRight").fadeIn(1000, function() {
+                            //$("#aboutBody").addClass('animated bounceInRight');
+                        });
                     }
                 }
                 this.changeNavColor("about");
@@ -70,6 +85,8 @@ class Layout extends Component {
                 if (firstSkill) {
                     firstSkill = false;
                     this.refs.skills.startTyping();
+                    window.Materialize.toast('Click on the Icons!', 2500);
+
                 }
                 this.changeNavColor("skills");
             }
@@ -106,7 +123,7 @@ class Layout extends Component {
                 <Row>
                     <Col s={12}>
                         <Home ref="home"/>
-                        <About ref="about"/>
+                        <About occupation={this.state.custom} ref="about"/>
                         <Skills ref="skills"/>
                         <Projects ref="projects"/>
                         <Contact ref="contact"/>

@@ -84,7 +84,7 @@ class Typer extends Component {
     render() {
         return (
             <div id="typedBody">
-                &nbsp;kandrupr@github.io:~$ <span id="typedSpan" ref="head" />
+                kandrupr@github.io:~$ <span id="typedSpan" ref="head" />
             </div>
         );
     }

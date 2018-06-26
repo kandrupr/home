@@ -5,6 +5,7 @@ import Typed from 'typed.js'
 
 class Home extends Component {
     componentDidMount() {
+        /*
         var colors = ['#F4D21F', '#1AACA8', '#9DCA40', '#DA5A98', '#E5683E',
             '#BC6D21', '#74BB63', '#DA1817', '#2283BC', '#31B495', '#1EB2D8',
             '#EB9D12', '#9DCA40', '#F4D21F', '#1EB2D8', '#E5683E', '#BE2F39',
@@ -30,6 +31,7 @@ class Home extends Component {
                 autoplay: true
             });
         }
+        */
         var options = {
             strings: ["","Web Development", "Mobile Development", "Data Science"],
             typeSpeed: 50,
@@ -42,7 +44,7 @@ class Home extends Component {
 
     render() {
         return (
-            <div id="home" className="scrollify" data-name="home">
+            <div id="home" className="scrollify" data-name="homepage">
                 <div id="homeFinder" className="finder"></div>
                 <div className="anim">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700">

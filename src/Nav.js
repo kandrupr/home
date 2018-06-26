@@ -13,8 +13,8 @@ const navColors  = {
     "home" : "#FFFFFF",
     "about" : "#556B2F",
     "skills" : "#2DA1A1",
-    "projects" : "#FFAB40",
-    "contact" : "#121212"
+    "projects" : "#008080",
+    "contact" : "#000000"
 };
 
 const navLogo  = {
@@ -54,7 +54,12 @@ class Nav extends Component {
         this.setState({logo: navLogo[b]});
     }
 
-
+    hover() {
+        $("#nav").addClass('animated jello');
+        setTimeout(function() {
+            $("#nav").removeClass('animated jello');
+        }, 1000);
+    }
 
     render() {
         return (
@@ -66,7 +71,7 @@ class Nav extends Component {
                     <NavButton ref="navProjects" name="projects"/>
                     <NavButton ref="navContact" name="contact"/>
                 </div>
-                <p><img src={this.state.logo} /></p>
+                <p id="navLogo" onMouseOver={this.hover.bind(this)}><img alt="Logo" src={this.state.logo} /></p>
             </div>
         );
     }

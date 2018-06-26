@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './css/Skills.css';
 import {Carousel} from 'react-materialize'
 import $ from 'jquery';
-import cplus from './assets/c++-icon.png';
-import csharp from './assets/c-sharp-icon.png';
-import java from './assets/java-icon.png';
-import javascript from './assets/javascript-icon.png';
-import php from './assets/php-icon.png';
-import python from './assets/python-icon.png';
-import reacticon from './assets/react-icon.png';
+import cplus from './assets/c++-icon.svg';
+import csharp from './assets/c-sharp-icon.svg';
+import java from './assets/java-icon.svg';
+import javascript from './assets/javascript-icon.svg';
+import php from './assets/php-icon.svg';
+import python from './assets/python-icon.svg';
+import reacticon from './assets/react-icon.svg';
 import resume from './assets/Resume.pdf';
 import Typer from './Typer.js'
 
@@ -28,7 +28,7 @@ class Skills extends Component {
 
     render() {
         return (
-            <div id="skills" className="scrollify" data-name="skills">
+            <div id="skills" className="scrollify" data-name="myskills">
                 <div id="skillsFinder" className="finder"></div>
                 <div id="skillsTop">
                     <h1 id="section">Skills</h1>
