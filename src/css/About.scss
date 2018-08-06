@@ -10,7 +10,7 @@
     * Original from  Toptal Subtle Patterns
     * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
     * by Federica Pelzel*/
-    background-image: url("../assets/honey_green.png");
+    background-image: url("../assets/honey_msu.png");
     display: none;
     background-color: $aboutBackgroundLeft;
 }
@@ -40,7 +40,7 @@
     * Original from  Toptal Subtle Patterns
     * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
     * by Federica Pelzel*/
-    background-image: url("../assets/honey_green.png");
+    background-image: url("../assets/honey_msu.png");
     @include aboutComponents(20%, 100%, left, $aboutBackgroundLeft);
 }
 
@@ -49,7 +49,7 @@
     * Original from  Toptal Subtle Patterns
     * at https://www.toptal.com/designers/subtlepatterns/light-honeycomb/
     * by Federica Pelzel*/
-    background-image: url("../assets/honey_grey.png");
+    background-image: url("../assets/honey_fa.png");
     @include aboutComponents(80%, 100%, right, $aboutBackgroundRight);
     color: $colorWhite;
 }
@@ -77,7 +77,7 @@
 }
 
 #hobbies .chip {
-    background-color: $aboutBackgroundRight;
+    background-color: $colorBlack;
     color: $colorWhite;
 }
 

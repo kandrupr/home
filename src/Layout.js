@@ -37,9 +37,11 @@ class Layout extends Component {
     componentDidMount() {
         var link = window.location.href;
         var custom = link.split("sp=");
-        //console.log(decodeURI(custom[1]));
+        console.log(decodeURI(custom[1]));
         if(custom.length === 2){
-            this.setState({custom: custom[1].replace('+', ' ')});
+            this.setState({custom: custom[1].replace('+', ' ')}, function(){
+                console.log(this.state.custom);
+            });
         }
 
         // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
@@ -55,11 +57,10 @@ class Layout extends Component {
             section : ".scrollify",
             sectionName : "name",
         });
-
     }
 
     componentWillUnmount() {
-        $(window).unbind('beforeunload');
+        //$(window).unbind('beforeunload');
     }
 
     scrollSpy() {

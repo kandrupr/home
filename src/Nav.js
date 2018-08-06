@@ -11,9 +11,9 @@ import contact from './assets/pk_contact.png'
 
 const navColors  = {
     "home" : "#FFFFFF",
-    "about" : "#556B2F",
+    "about" : "#125245",
     "skills" : "#2DA1A1",
-    "projects" : "#008080",
+    "projects" : "#FFAB40",
     "contact" : "#000000"
 };
 

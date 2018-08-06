@@ -28,19 +28,22 @@ class About extends Component {
                             <p>Interests &amp; Hobbies: </p>
                             <Chip>Film</Chip>
                             <Chip>Basketball</Chip>
+                            {/*
                             <Chip>Traveling</Chip>
                             <Chip>Running</Chip>
-                            <Chip>Cooking</Chip>
+                            <Chip>Cooking</Chip>*/}
                         </div>
                     </div>
                 </div>
                 <div id="aboutRight">
                     <div id="aboutBody">
                         <div id="aboutBodyTop">
-                            <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2>
+                            {/* <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2> */ }
                         </div>
                         <div id="aboutBodyBot">
-                            <p></p>
+                            <p>
+
+                            </p>
                         </div>
                     </div>
                 </div>
