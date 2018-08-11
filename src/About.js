@@ -38,7 +38,7 @@ class About extends Component {
                 <div id="aboutRight">
                     <div id="aboutBody">
                         <div id="aboutBodyTop">
-                            <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2>
+                            {/* <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2> */ }
                         </div>
                         <div id="aboutBodyBot">
                             <p>
