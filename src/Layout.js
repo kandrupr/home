@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './css/Layout.css';
-import Home from './Home.js'
+// import Home from './Home.js'
 import About from './About.js'
 import Skills from './Skills.js'
 import Projects from './Projects.js'
@@ -19,7 +19,7 @@ class Layout extends Component {
     constructor() {
         super();
         this.state = {
-            current: "home",
+            current: "contact",
             custom: "Software Engineer"
         };
     }
@@ -37,14 +37,18 @@ class Layout extends Component {
     componentDidMount() {
         var link = window.location.href;
         var custom = link.split("sp=");
-        console.log(decodeURI(custom[1]));
         if(custom.length === 2){
             this.setState({custom: custom[1].replace('+', ' ')}, function(){
-                console.log(this.state.custom);
+                localStorage.setItem("JOBTITLE", this.state.custom);
             });
+        } else {
+            if(localStorage.getItem("JOBTITLE")) {
+                console.log(localStorage.getItem("JOBTITLE"));
+                this.setState({custom: localStorage.getItem("JOBTITLE")});
+            }
         }
 
-        // document.getElementById('home').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
+        document.getElementById('about').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
         window.history.replaceState(null, '', "/");
         this.scrollSpy();
         var that = this;
@@ -60,15 +64,11 @@ class Layout extends Component {
     }
 
     componentWillUnmount() {
-        //$(window).unbind('beforeunload');
+
     }
 
     scrollSpy() {
-        if(this.inView("#homeFinder")){
-            if(this.state.current !== "home") {
-                this.changeNavColor("home");
-            }
-        } else if(this.inView("#aboutFinder")) {
+        if(this.inView("#aboutFinder")) {
             if(this.state.current !== "about") {
                 if(firstAbout) {
                     if(window.innerWidth > 300) {
@@ -106,7 +106,6 @@ class Layout extends Component {
             if(this.state.current !== "contact") {
                 if (firstContact) {
                     firstContact = false;
-                    // add animation?
                 }
                 this.changeNavColor("contact");
             }
@@ -123,7 +122,7 @@ class Layout extends Component {
             <div>
                 <Row>
                     <Col s={12}>
-                        <Home ref="home"/>
+                        {/*<Home ref="home"/>*/}
                         <About occupation={this.state.custom} ref="about"/>
                         <Skills ref="skills"/>
                         <Projects ref="projects"/>

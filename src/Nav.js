@@ -65,7 +65,7 @@ class Nav extends Component {
         return (
             <div id="nav">
                 <div ref="navHolder" id="navHolder">
-                    <NavButton ref="navHome" name="home"/>
+                    {/*<NavButton ref="navHome" name="home"/>*/}
                     <NavButton ref="navAbout" name="about"/>
                     <NavButton ref="navSkills" name="skills"/>
                     <NavButton ref="navProjects" name="projects"/>

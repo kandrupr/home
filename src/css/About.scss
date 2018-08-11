@@ -58,6 +58,7 @@
     @include setDim(65%, 75%);
     @include transformXY(50%, 10%, 0, -50%);
     font-size: 1.1em;
+    color: black;
 }
 
 #aboutBody p {
