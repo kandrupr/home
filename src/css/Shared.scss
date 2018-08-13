@@ -1,4 +1,4 @@
-$aboutBackgroundLeft: #125245;
+$aboutBackgroundLeft: #2E2E2E;
 $aboutBackgroundRight: #FAFAFA;
 
 $colorWhite: white;
@@ -18,7 +18,7 @@ $ubuntuFont: 'Ubuntu Mono', monospace;
   height: $height;
   position: relative;
   float: $float;
-  display: none;
+  //display: none;
   background-color: $backColor;
 }
 

@@ -9,6 +9,7 @@ import Nav from './Nav.js'
 import $ from 'jquery';
 import {Row, Col} from 'react-materialize'
 import 'jquery-scrollify'
+import anime from 'animejs'
 
 var firstAbout = true;
 var firstSkill = true;
@@ -71,10 +72,10 @@ class Layout extends Component {
                 if(firstAbout) {
                     if(window.innerWidth > 300) {
                         firstAbout = false;
-                        $("#aboutLeft").fadeIn(1000);
+                        /*$("#aboutLeft").fadeIn(1000);
                         $("#aboutRight").fadeIn(1000, function() {
                             //$("#aboutBody").addClass('animated bounceInRight');
-                        });
+                        });*/
                     }
                 }
                 this.changeNavColor("about");

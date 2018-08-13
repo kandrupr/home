@@ -10,8 +10,8 @@ import contact from './assets/pk_contact.png'
 
 
 const navColors  = {
-    "home" : "#FFFFFF",
-    "about" : "#125245",
+    "home" : "#000000",
+    "about" : "#18453B",
     "skills" : "#2DA1A1",
     "projects" : "#FA7D23",
     "contact" : "#000000"
