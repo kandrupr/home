@@ -3,6 +3,17 @@ import './css/About.css'
 import pkkanPhoto from './assets/pkkan-photo.jpg';
 import {Chip} from 'react-materialize';
 import $ from 'jquery';
+import sEng from './assets/softwareEng.svg';
+import sDev from './assets/softwareDev.svg';
+import wDev from './assets/webDev.svg';
+import mDev from './assets/mobileDev.svg';
+
+const occupation  = {
+    "Software Engineer" : sEng,
+    "Software Developer" : sDev,
+    "Web Developer" : wDev,
+    "Android Developer" : mDev
+};
 
 class About extends Component {
     hover() {
@@ -38,7 +49,7 @@ class About extends Component {
                 <div id="aboutRight">
                     <div id="aboutBody">
                         <div id="aboutBodyTop">
-                            {/* <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2> */ }
+                            <p><img alt={"I'm Pranay a, " + this.props.occupation + "."} src={occupation[this.props.occupation]}/></p>{/* <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2> */ }
                         </div>
                         <div id="aboutBodyBot">
                             <p>

@@ -39,16 +39,19 @@
 #projectsGithub img {
     @include setDim(30px, 30px);
 }
-#projectsGithub, #projectsTopSlider h2, .card-title   {
-    color: $projectYellow !important;
+#projectsGithub, #projectsTopSlider h2 {
+    color: #FA7D23 !important;
 }
 
+.card-title {
+    color: $colorWhite !important;
+}
 .card{
-    color: #FF663F !important;
+    color: $colorBlack !important;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
-    color: #FF663F;
+    color: #FA7D23;
 }
 
 @keyframes moveRight {
@@ -66,7 +69,7 @@
      * Original from  Toptal Subtle Patterns
      * at https://www.toptal.com/designers/subtlepatterns/seigaiha/
      * by Olga Libby*/
-    background-image: url("../assets/seigaiha-2d.png");
+    background-image: url("../assets/seigaiha-strong-red.png");
     height: 60vh;
     position: relative;
     /*animation: moveRight 10s linear infinite;*/

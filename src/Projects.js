@@ -5,7 +5,7 @@ import {Button, Card, CardTitle, Col} from 'react-materialize'
 import movieR from './assets/movieR.jpg';
 import movieP from './assets/movieP.jpg';
 import captcha from './assets/captcha.jpg';
-import githubIcon from './assets/github-icon2.png';
+import githubIcon from './assets/github-icon.png';
 import Slider from "react-slick";
 
 class Projects extends Component {

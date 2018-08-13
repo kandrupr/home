@@ -43,13 +43,13 @@ class Layout extends Component {
             });
         } else {
             if(localStorage.getItem("JOBTITLE")) {
-                console.log(localStorage.getItem("JOBTITLE"));
+                // console.log(localStorage.getItem("JOBTITLE"));
                 this.setState({custom: localStorage.getItem("JOBTITLE")});
             }
         }
 
         document.getElementById('about').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
-        window.history.replaceState(null, '', "/");
+        window.history.pushState(null, '', "/");
         this.scrollSpy();
         var that = this;
 
@@ -63,9 +63,7 @@ class Layout extends Component {
         });
     }
 
-    componentWillUnmount() {
-
-    }
+    componentWillUnmount() {}
 
     scrollSpy() {
         if(this.inView("#aboutFinder")) {

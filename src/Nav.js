@@ -13,7 +13,7 @@ const navColors  = {
     "home" : "#FFFFFF",
     "about" : "#125245",
     "skills" : "#2DA1A1",
-    "projects" : "#FFAB40",
+    "projects" : "#FA7D23",
     "contact" : "#000000"
 };
 
