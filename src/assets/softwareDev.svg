@@ -1,25 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    viewBox="0 0 800 135"
    height="135"
    width="800"
    xml:space="preserve"
    id="svg40"
-   version="1.1"><metadata
-     id="metadata46"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs44"><clipPath
-       id="clipPath56"
-       clipPathUnits="userSpaceOnUse"><path
-         style="clip-rule:evenodd"
-         id="path54"
-         d="M 9.12e-6,0 H 612.00001 V 792 H 9.12e-6 Z" /></clipPath></defs><g
+   version="1.1"><g
      transform="matrix(1.3333333,0,0,-1.3333333,0,135)"
      id="g48"><g
        transform="translate(-4.6698115,-342.76415)"

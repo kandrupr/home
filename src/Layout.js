@@ -21,7 +21,7 @@ class Layout extends Component {
         super();
         this.state = {
             current: "contact",
-            custom: "Software Engineer"
+            custom: "sEng"
         };
     }
 
@@ -41,11 +41,13 @@ class Layout extends Component {
         if(custom.length === 2){
             this.setState({custom: custom[1].replace('+', ' ')}, function(){
                 localStorage.setItem("JOBTITLE", this.state.custom);
+                //console.log(this.state.custom);
             });
         } else {
             if(localStorage.getItem("JOBTITLE")) {
-                // console.log(localStorage.getItem("JOBTITLE"));
+                //console.log(localStorage.getItem("JOBTITLE"));
                 this.setState({custom: localStorage.getItem("JOBTITLE")});
+
             }
         }
 

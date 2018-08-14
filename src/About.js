@@ -3,19 +3,54 @@ import './css/About.css'
 import pkkanPhoto from './assets/pkkan-photo.jpg';
 import {Chip} from 'react-materialize';
 import $ from 'jquery';
-import sEng from './assets/softwareEng.svg';
-import sDev from './assets/softwareDev.svg';
-import wDev from './assets/webDev.svg';
-import mDev from './assets/mobileDev.svg';
-
-const occupation  = {
-    "Software Engineer" : sEng,
-    "Software Developer" : sDev,
-    "Web Developer" : wDev,
-    "Android Developer" : mDev
-};
+import Seng from '-!svg-react-loader?name=Seng!./assets/softwareEng.svg'; // eslint-disable-line import/no-webpack-loader-syntax
+import Sdev from '-!svg-react-loader?name=Sdev!./assets/softwareDev.svg'; // eslint-disable-line import/no-webpack-loader-syntax
+import Wdev from '-!svg-react-loader?name=Wdev!./assets/webDev.svg'; // eslint-disable-line import/no-webpack-loader-syntax
+import Mdev from '-!svg-react-loader?name=Mdev!./assets/mobileDev.svg'; // eslint-disable-line import/no-webpack-loader-syntax
 
 class About extends Component {
+    constructor() {
+        super();
+        this.state = {
+            svg: <Seng/>
+        }
+    }
+
+    componentDidMount() {
+        console.log(this.props.occupation);
+        switch(this.props.occupation) {
+            case "sEng":
+                this.setState({svg: <Seng />});
+                break;
+            case "sDev":
+                this.setState({svg: <Sdev />});
+                break;
+            case "mDev":
+                this.setState({svg: <Mdev />});
+                break;
+            case "wDev":
+                this.setState({svg: <Wdev />});
+                break;
+            default:
+                this.setState({svg: <Seng />});
+                break;
+        }
+    }
+
+    getSVG() {
+        switch(this.props.occupation) {
+            case "sEng":
+                return (<Seng />);
+            case "sDev":
+                return (<Sdev /> );
+            case "mDev":
+                return (<Mdev />);
+            case "wDev":
+                return (<Wdev />);
+            default:
+                return (<Seng />);
+        }
+    }
     hover() {
         $("#pk_photo").addClass('animated bounce');
         //$("#pk_photo").removeClass('animated bounce');
@@ -49,7 +84,7 @@ class About extends Component {
                 <div id="aboutRight">
                     <div id="aboutBody">
                         <div id="aboutBodyTop">
-                            <p><img id="occImage" alt={"I'm Pranay a, " + this.props.occupation + "."} src={occupation[this.props.occupation]}/></p>{/* <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2> */ }
+                            {this.getSVG()}{/*{sEng} <h2>Hi, I'm Pranay. A {this.props.occupation}.</h2> */ }
                         </div>
                         <div id="aboutBodyBot">
                             <p>
