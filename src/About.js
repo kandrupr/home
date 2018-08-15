@@ -60,11 +60,10 @@ class About extends Component {
                         <div id="hobbies">
                             <p>Interests &amp; Hobbies: </p>
                             <Chip>Film</Chip>
-                            <Chip>Basketball</Chip>
-                            {/*
+                            <Chip>Cooking</Chip>
                             <Chip>Traveling</Chip>
-                            <Chip>Running</Chip>
-                            <Chip>Cooking</Chip>*/}
+                            <Chip>Listening to Music</Chip>
+                            <Chip>Weightlifting</Chip>
                         </div>
                     </div>
                 </div>
@@ -75,7 +74,7 @@ class About extends Component {
                         </div>
                         <div id="aboutBodyBot">
                             <p>
-                                I graduated from Michigan State University with a Bachelors of Computer Science. My interests include Computer Security, Machine Learning, and Scripting.
+                                I graduated from Michigan State University with a Bachelors in Computer Science. My interests include Computer Security, Machine Learning, and Scripting.
                             </p>
                         </div>
                     </div>

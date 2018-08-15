@@ -35,8 +35,6 @@ class Layout extends Component {
     }
 
     componentDidMount() {
-        console.log("LAYOUT");
-
         document.getElementById('about').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
         window.history.pushState(null, '', "/");
         this.scrollSpy();
@@ -59,7 +57,6 @@ class Layout extends Component {
             if(this.state.current !== "about") {
                 if(firstAbout) {
                     if(window.innerWidth > 300) {
-                        firstAbout = false;
                         var lineDrawing = anime({
                             targets: '#aboutBodyTop svg g path',
                             strokeDashoffset: [anime.setDashoffset, 0],
