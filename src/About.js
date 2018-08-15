@@ -61,9 +61,9 @@ class About extends Component {
                             <p>Interests &amp; Hobbies: </p>
                             <Chip>Film</Chip>
                             <Chip>Cooking</Chip>
+                            <Chip>Weightlifting</Chip>
                             <Chip>Traveling</Chip>
                             <Chip>Listening to Music</Chip>
-                            <Chip>Weightlifting</Chip>
                         </div>
                     </div>
                 </div>

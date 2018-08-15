@@ -21,8 +21,8 @@
     padding-top: 15px;
     font-size: 2rem;
     text-align: center;
-    color: $colorBlack;
-    background-image: url("../assets/honey-fa2.png");
+    color: $colorWhite;
+    background-image: url("../assets/honey-msu.png");
 }
 
 #aboutCenter {
@@ -72,7 +72,6 @@
 
 #aboutBodyTop {
   @include setDim(100%, auto);
-
 }
 
 #aboutBodyTop svg {
@@ -160,6 +159,11 @@
 
     #hobbies {
         display: none;
+    }
+
+    #aboutTopRight h1{
+        background-image: url("../assets/honey-fa2.png");
+        color: $colorBlack;
     }
 }
 
