@@ -75,7 +75,7 @@ class About extends Component {
                         </div>
                         <div id="aboutBodyBot">
                             <p>
-
+                                I graduated from Michigan State University with a Bachelors of Computer Science. My interests include Computer Security, Machine Learning, and Scripting.
                             </p>
                         </div>
                     </div>

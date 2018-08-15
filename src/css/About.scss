@@ -21,7 +21,8 @@
     padding-top: 15px;
     font-size: 2rem;
     text-align: center;
-    color: $colorWhite;
+    color: $colorBlack;
+    background-image: url("../assets/honey-fa2.png");
 }
 
 #aboutCenter {
@@ -79,7 +80,13 @@
 }
 
 #aboutBodyBot {
+    display: none;
     @include setDim(100%, 60%);
+}
+
+#aboutBodyBot p {
+    font-size: 1.75em;
+    word-break: keep-all;
 }
 
 #hobbies .chip {

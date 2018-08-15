@@ -64,9 +64,12 @@ class Layout extends Component {
                             targets: '#aboutBodyTop svg g path',
                             strokeDashoffset: [anime.setDashoffset, 0],
                             easing: 'easeInOutSine',
-                            duration: 5000,
+                            delay: 1000,
+                            duration: 1500,
                             complete: function(anim) {
-                                console.log("DONE");
+                                $("#aboutBodyBot").fadeIn(500, function(){
+                                    $("svg g").css({fill:"black"});
+                                });
                             }
                         });
                     }
