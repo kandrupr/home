@@ -21,7 +21,6 @@ class Layout extends Component {
         super();
         this.state = {
             current: "contact",
-            custom: "sEng"
         };
     }
 
@@ -36,20 +35,7 @@ class Layout extends Component {
     }
 
     componentDidMount() {
-        var link = window.location.href;
-        var custom = link.split("sp=");
-        if(custom.length === 2){
-            this.setState({custom: custom[1].replace('+', ' ')}, function(){
-                localStorage.setItem("JOBTITLE", this.state.custom);
-                //console.log(this.state.custom);
-            });
-        } else {
-            if(localStorage.getItem("JOBTITLE")) {
-                //console.log(localStorage.getItem("JOBTITLE"));
-                this.setState({custom: localStorage.getItem("JOBTITLE")});
-
-            }
-        }
+        console.log("LAYOUT");
 
         document.getElementById('about').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
         window.history.pushState(null, '', "/");
@@ -74,11 +60,17 @@ class Layout extends Component {
                 if(firstAbout) {
                     if(window.innerWidth > 300) {
                         firstAbout = false;
-                        /*$("#aboutLeft").fadeIn(1000);
-                        $("#aboutRight").fadeIn(1000, function() {
-                            //$("#aboutBody").addClass('animated bounceInRight');
-                        });*/
+                        var lineDrawing = anime({
+                            targets: '#aboutBodyTop svg g path',
+                            strokeDashoffset: [anime.setDashoffset, 0],
+                            easing: 'easeInOutSine',
+                            duration: 5000,
+                            complete: function(anim) {
+                                console.log("DONE");
+                            }
+                        });
                     }
+                    firstAbout = false;
                 }
                 this.changeNavColor("about");
             }
@@ -124,7 +116,7 @@ class Layout extends Component {
                 <Row>
                     <Col s={12}>
                         {/*<Home ref="home"/>*/}
-                        <About occupation={this.state.custom} ref="about"/>
+                        <About ref="about"/>
                         <Skills ref="skills"/>
                         <Projects ref="projects"/>
                         <Contact ref="contact"/>
