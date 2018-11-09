@@ -11,15 +11,17 @@ import Slider from "react-slick";
 class Projects extends Component {
     constructor() {
         super();
+        // Boolean to change component based on screen size
         this.state = {
           resize: false
         };
+        // Static data for materialize item
         this.info = [
             "Tired of scrolling through Netflix? Find movies that you'll like.",
             "Discover new movies, learn about the old ones too.",
             "Find out what kind of dog you have thousands of pictures of."
         ];
-
+        // Static data for materialize item
         this.links = [
             "https://goo.gl/AfpGX5",
             "https://github.com/kandrupr/MoviePast",
@@ -29,6 +31,7 @@ class Projects extends Component {
 
     componentDidMount() {
         var that = this;
+        // Screen size listener
         $(window).resize(function() {
             setTimeout(function() {
                 that.setState({resize: true});
@@ -36,7 +39,9 @@ class Projects extends Component {
         });
     }
 
+    // Decide which project card to use
     createProjectHolder() {
+        // Smaller Materialize Object
         if(window.innerWidth < 1024) {
             const settings = {
                 dots: true,
@@ -61,6 +66,7 @@ class Projects extends Component {
                 </Col>
             );
         } else {
+            // Larger Materialize Object
             return (
                 <Col id="projectHolder" s={8}>
                     <Col s={3}>
@@ -79,6 +85,14 @@ class Projects extends Component {
         }
     }
 
+    /**
+     * Materialize Card
+     * @param key Number of cards
+     * @param title Card Title
+     * @param image Image based on key
+     * @param check
+     * @returns {XML} Materialize Card object
+     */
     createCard(key, title, image, check) {
         if(check) {
             return  (
@@ -99,6 +113,7 @@ class Projects extends Component {
         }
     }
 
+    // Github button onClick event
     goToGithub() {
         window.location.href = "https://github.com/kandrupr"
     }

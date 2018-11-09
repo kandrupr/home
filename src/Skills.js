@@ -12,16 +12,20 @@ import reacticon from './assets/react-icon.svg';
 import resume from './assets/Resume.pdf';
 import Typer from './Typer.js'
 
+// Skills page component
 class Skills extends Component {
     componentDidMount() {
         var that = this;
+        // Get all carousel items
         var children = $(".carousel").children();
+        // Create carousel listener for clicking on language images
         $(".carousel-item").click( function() {
             var a = children.index(this);
             that.refs.terminal.resumeTyping(a);
         });
     }
 
+    // Function passed up to layout to start typing on Skills component
     startTyping() {
         this.refs.terminal.firstType();
     }

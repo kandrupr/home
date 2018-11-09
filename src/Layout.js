@@ -19,11 +19,14 @@ var firstContact = true;
 class Layout extends Component {
     constructor() {
         super();
+        // What is being looked at currently start at bottom
+        // so first look at about is able to execute
         this.state = {
             current: "contact",
         };
     }
 
+    // Function to see if element is in current view
     inView(elem) {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
@@ -35,15 +38,20 @@ class Layout extends Component {
     }
 
     componentDidMount() {
+        // Scroll to the top
         document.getElementById('about').scrollIntoView({block: "end", inline: "nearest", behavior: "smooth"});
+        // Change URL that is shown
         window.history.pushState(null, '', "/");
+        // Run Scroll Spy once before
         this.scrollSpy();
         var that = this;
 
+        // Create scrollspy listener
         $(window).scroll(function() {
             that.scrollSpy();
         });
 
+        // Allows for full page scrolls
         $.scrollify({
             section : ".scrollify",
             sectionName : "name",
@@ -56,6 +64,7 @@ class Layout extends Component {
         if(this.inView("#aboutFinder")) {
             if(this.state.current !== "about") {
                 if(firstAbout) {
+                    // Draw SVG
                     if(window.innerWidth > 300) {
                         // eslint-disable-next-line
                         var lineDrawing = anime({
@@ -78,6 +87,7 @@ class Layout extends Component {
         } else if(this.inView("#skillsFinder")) {
             if(this.state.current !== "skills") {
                 if (firstSkill) {
+                    // Start Typing
                     firstSkill = false;
                     this.refs.skills.startTyping();
                     window.Materialize.toast('Click on the Icons!', 2500);
@@ -88,6 +98,7 @@ class Layout extends Component {
         } else if(this.inView("#projectsFinder")) {
             if(this.state.current !== "projects") {
                 if (firstProjects) {
+                    // Slide top and bottom projects divs
                     if (window.innerWidth > 1024) {
                         firstProjects = false;
                         $("#projectsTopSlider").addClass('animated bounceInRight');
@@ -106,6 +117,7 @@ class Layout extends Component {
         }
     }
 
+    // Change the navbar to current page and set state to current page
     changeNavColor(a, font) {
         this.refs.nav.changeNav(this.state.current, a, font);
         this.setState({current: a});

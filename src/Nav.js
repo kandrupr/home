@@ -8,7 +8,7 @@ import skills from './assets/pk_skills.png'
 import projects from './assets/pk_projects.png'
 import contact from './assets/pk_contact.png'
 
-
+// Color based on page
 const navColors  = {
     "home" : "#000000",
     "about" : "#18453B",
@@ -17,6 +17,7 @@ const navColors  = {
     "contact" : "#000000"
 };
 
+// Color of logo based on page
 const navLogo  = {
     "home" : home,
     "about" : about,
@@ -29,11 +30,13 @@ var maps;
 class Nav extends Component {
     constructor() {
         super();
+        // PK Logo at the bottom of nav
         this.state = {
             logo: navLogo["home"],
         };
     }
     componentDidMount() {
+        // Dictionary based on reference to each navbutton
         maps = {
             "home" : this.refs.navHome,
             "about" : this.refs.navAbout,
@@ -43,6 +46,7 @@ class Nav extends Component {
         };
     }
 
+    // Change navbar on a page change
     changeNav(a, b, c='Roboto') {
         $(".navTitle").css({
             color : navColors[b],
@@ -51,9 +55,11 @@ class Nav extends Component {
         });
         maps[a].inactiveNav();
         maps[b].activeNav();
+        // Change logo based on page change
         this.setState({logo: navLogo[b]});
     }
 
+    // Hover over PK logo for animation
     hover() {
         $("#nav").addClass('animated jello');
         setTimeout(function() {

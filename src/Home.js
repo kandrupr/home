@@ -3,6 +3,9 @@ import './css/Home.css';
 import anime from 'animejs'
 import Typed from 'typed.js'
 
+/**
+ * Home page component no longer used
+ */
 class Home extends Component {
     componentDidMount() {
         /*

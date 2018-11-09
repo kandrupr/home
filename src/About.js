@@ -8,6 +8,7 @@ import Seng from '-!svg-react-loader?name=Seng!./assets/softwareEng.svg'; // esl
 import Sdev from '-!svg-react-loader?name=Sdev!./assets/softwareDev.svg'; // eslint-disable-line import/no-webpack-loader-syntax
 import Mdev from '-!svg-react-loader?name=Mdev!./assets/mobileDev.svg'; // eslint-disable-line import/no-webpack-loader-syntax
 
+// Structure holding all svg files
 const items  = {
     "sEng" : <Seng />,
     "sDev" : <Sdev />,
@@ -15,17 +16,23 @@ const items  = {
     "wDev" : <Wdev />,
 };
 
+/**
+ * About Page Component
+ */
 class About extends Component {
     constructor() {
         super();
+        // Software Engineer as default
         this.state = {
             custom: "sEng"
         }
     }
 
+    // Add a bounce animation to profile picture
     hover() {
+        // Add bounce class
         $("#pk_photo").addClass('animated bounce');
-        //$("#pk_photo").removeClass('animated bounce');
+        // Remove after 1 second
         setTimeout(function() {
             $("#pk_photo").removeClass('animated bounce');
         }, 1000);
@@ -34,11 +41,14 @@ class About extends Component {
     render() {
         let svg = "";
         var link = window.location.href;
+        // Look to url to get type of profession
         var custom = link.split("sp=");
         if(custom.length === 2){
+            // If title is given set it
             svg = items[custom[1]];
             localStorage.setItem("JOBTITLE", custom[1]);
         } else {
+            // If a title is not given, look to see if it is set or set to defaul
             if(localStorage.getItem("JOBTITLE")) {
                 svg = items[localStorage.getItem("JOBTITLE")];
             } else {

@@ -7,10 +7,15 @@ var options;
 var complete = false;
 var typing = false;
 
+/**
+ * Typing data component for command prompt in Skills page
+ */
 class Typer extends Component {
     constructor() {
         super();
+        // Starting value
         this.value = 0;
+        // Static information for each language
         this.languages = [
             "^400C++^1000\n Have experience in Object Oriented Programming...^100\n Expertise:^1000 Intermediate...",
             "^400C#^1000\n Developed a website in ASP.NET Core and a few console applications...^100\n Expertise:^1000 Novice...",
@@ -22,6 +27,7 @@ class Typer extends Component {
         ];
     }
 
+    // Options for typed object
     getOptions(value) {
         var that = this;
         return {
@@ -63,14 +69,16 @@ class Typer extends Component {
         });*/
     }
 
+    // Used in skills page for the first typing
     firstType() {
-
         options = this.getOptions(0);
         typed = new Typed(this.refs.head, options);
         typing = true;
     }
 
+    // Typing is over and completed delete and type something new
     resumeTyping (value) {
+        // Typing done this way because of erratic behavior
         if(!typing && complete){
             if(value !== this.value) {
                 this.value = value;
