@@ -57,6 +57,7 @@ class Layout extends Component {
             if(this.state.current !== "about") {
                 if(firstAbout) {
                     if(window.innerWidth > 300) {
+                        // eslint-disable-next-line
                         var lineDrawing = anime({
                             targets: '#aboutBodyTop svg g path',
                             strokeDashoffset: [anime.setDashoffset, 0],

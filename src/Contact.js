@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './css/Contact.css';
 import {Button, Col, Input, ProgressBar} from 'react-materialize'
 import $ from "jquery";
+import axios from "axios";
 
 class Contact extends Component {
     constructor () {
@@ -65,7 +66,7 @@ class Contact extends Component {
                 shaker.removeClass('animated shake');
             }
         }, 1100);
-        $("fail").click();
+
         var fields = [this.state.name, this.state.subject, this.state.message];
         var failMessages = ["#nameFail", "#subjectFail", "#messageFail"];
 
@@ -118,39 +119,31 @@ class Contact extends Component {
 
     sendMail(data, inputText, failMessages) {
         var that = this;
-
-        $.ajax({
-            url: "https://webdev.cse.msu.edu/~kandrupr/mailman/sendmail.php",
-            type: "post",
-            data: data,
-            timeout: 10000,
-            success: function (response) {
-                if(response.operation) {
-                    for(var i = 0; i < failMessages.length; i++) {
-                        $(inputText + i).val("");
-                        $(inputText + i).prop("disabled", false);
-                    }
-                    window.Materialize.toast("I'll get back to you soon!", 2000);
-                } else {
-                    for(var j = 0; j < failMessages.length; j++) {
-                        $(inputText + j).prop("disabled", false);
-                    }
-                    window.Materialize.toast('Missing some data! Try again!', 2000);
+        axios
+          .post("URL", data)
+          .then(res => {
+              console.log(res.data.operation);
+             if(res.data.operation) {
+                for(var i = 0; i < failMessages.length; i++) {
+                    $(inputText + i).val("");
+                    $(inputText + i).prop("disabled", false);
                 }
-                that.setState({sending: false});
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
+                window.Materialize.toast("I'll get back to you soon!", 2000);
+             } else {
                 for(var j = 0; j < failMessages.length; j++) {
                     $(inputText + j).prop("disabled", false);
                 }
-                if(textStatus==="timeout") {
-                    window.Materialize.toast('Took to long to connect! Try again!', 2000);
-                } else {
-                    window.Materialize.toast('Something went wrong! Try again!', 2000);
-                }
-                that.setState({sending: false});
-            }
-        });
+                window.Materialize.toast('Missing some data! Try again!', 2000);
+             }
+             that.setState({sending: false});
+          })
+          .catch(res => {
+             for(var j = 0; j < failMessages.length; j++) {
+                $(inputText + j).prop("disabled", false);
+             }
+             window.Materialize.toast('Something went wrong! Try again!', 2000);
+             that.setState({sending: false});
+           });
     }
 
     render() {
